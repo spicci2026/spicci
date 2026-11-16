@@ -1,0 +1,101 @@
+{
+ "id": "./",
+ "name": "Spicci – I bonus che ti spettano",
+ "short_name": "Spicci",
+ "description": "Bonus, fondi e agevolazioni di Stato, Regioni e Comuni scelti per te in 30 secondi. Gratis, senza registrazione: i tuoi dati restano sul telefono.",
+ "lang": "it",
+ "dir": "ltr",
+ "start_url": "./?source=app",
+ "scope": "./",
+ "display": "standalone",
+ "display_override": [
+  "standalone",
+  "minimal-ui"
+ ],
+ "orientation": "portrait",
+ "background_color": "#0e0f14",
+ "theme_color": "#7c5cff",
+ "categories": [
+  "finance",
+  "lifestyle",
+  "utilities"
+ ],
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icons/maskable-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "maskable"
+  },
+  {
+   "src": "icons/maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Per te",
+   "url": "./?v=perte",
+   "icons": [
+    {
+     "src": "icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "In arrivo",
+   "url": "./?v=arrivo",
+   "icons": [
+    {
+     "src": "icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "Regioni",
+   "url": "./?v=regioni",
+   "icons": [
+    {
+     "src": "icons/icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ],
+ "screenshots": [
+  {
+   "src": "screenshots/1-per-te.png",
+   "sizes": "1080x1920",
+   "type": "image/png",
+   "form_factor": "narrow"
+  },
+  {
+   "src": "screenshots/2-tutti.png",
+   "sizes": "1080x1920",
+   "type": "image/png",
+   "form_factor": "narrow"
+  },
+  {
+   "src": "screenshots/3-regioni.png",
+   "sizes": "1080x1920",
+   "type": "image/png",
+   "form_factor": "narrow"
+  }
+ ]
+}
