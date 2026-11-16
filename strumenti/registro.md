@@ -2,6 +2,7 @@
 
 Le righe più recenti in alto. Formato: data — modifica — fonte ufficiale.
 
+- 2026-11-16 — "Vicino a te" mostra solo le misure della propria Regione o del proprio Comune; quelle di altre Regioni (es. bonus per trasferirsi in Sardegna) vanno nell'elenco generale.
 - 2026-11-16 — Indicato Nicolas Vigorelli come titolare del trattamento nella privacy.
 - 2026-11-16 — Corretta l'email di contatto in colorcreation.org@gmail.com.
 - 2026-11-16 — Aggiunta l'email di contatto (prima versione, errata) nelle pagine privacy, termini, fonti e aiuto.

@@ -803,7 +803,7 @@
     hits.sort(function(a,b){ return (a.r.s==='ok'?0:1)-(b.r.s==='ok'?0:1); });
     $('heroN').textContent=hits.length;
     $('heroL').textContent = hits.length ? (hits.length===1?'misura potrebbe riguardarti':'misure potrebbero riguardarti')+' su '+ATTIVI.length+' in catalogo' : 'Nessuna misura trovata con questi dati';
-    var loc=hits.filter(function(o){ return !!o.x.z; }), naz=hits.filter(function(o){ return !o.x.z; });
+    var loc=hits.filter(function(o){ return !!o.x.z&&!altrove(o.x); }), naz=hits.filter(function(o){ return !o.x.z||altrove(o.x); });
     var nome=String($('comune').value||'').trim();
     if(true){
       var h=el('h2',null,'📍 Vicino a te'); h.style.margin='18px 0 10px'; L.appendChild(h);
