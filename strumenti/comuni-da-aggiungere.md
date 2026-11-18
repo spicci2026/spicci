@@ -4,10 +4,6 @@ L'aggiornamento automatico (lunedì, mercoledì, venerdì) aggiunge **fino a 4 C
 Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non trovi misure verificabili sul sito ufficiale, spostalo in "Rimandati" con il motivo e passa al successivo.
 
 ## Da fare (in ordine di priorità)
-- Reggio Emilia (Emilia-Romagna)
-- Latina (Lazio)
-- Siracusa (Sicilia)
-- Forlì (Emilia-Romagna)
 - Vicenza (Veneto)
 - Bolzano (Trentino-Alto Adige)
 - Terni (Umbria)
@@ -77,6 +73,10 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 - Urbino (Marche)
 
 ## Fatti
+- Reggio Emilia (Emilia-Romagna) — 2026-11-18
+- Latina (Lazio) — 2026-11-18
+- Siracusa (Sicilia) — 2026-11-18
+- Forlì (Emilia-Romagna) — 2026-11-18
 - Messina (Sicilia) — 2026-11-18
 - Parma (Emilia-Romagna) — 2026-11-18
 
