@@ -4,10 +4,6 @@ L'aggiornamento automatico (lunedì, mercoledì, venerdì) aggiunge **fino a 4 C
 Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non trovi misure verificabili sul sito ufficiale, spostalo in "Rimandati" con il motivo e passa al successivo.
 
 ## Da fare (in ordine di priorità)
-- Vicenza (Veneto)
-- Bolzano (Trentino-Alto Adige)
-- Terni (Umbria)
-- Novara (Piemonte)
 - Piacenza (Emilia-Romagna)
 - Andria, Barletta, Trani (Puglia)
 - Udine (Friuli-Venezia Giulia)
@@ -73,6 +69,10 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 - Urbino (Marche)
 
 ## Fatti
+- Vicenza (Veneto) — 2026-11-18
+- Bolzano (Trentino-Alto Adige) — 2026-11-18
+- Terni (Umbria) — 2026-11-18
+- Novara (Piemonte) — 2026-11-18
 - Reggio Emilia (Emilia-Romagna) — 2026-11-18
 - Latina (Lazio) — 2026-11-18
 - Siracusa (Sicilia) — 2026-11-18

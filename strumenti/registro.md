@@ -2,6 +2,16 @@
 
 Le righe più recenti in alto. Formato: data — modifica — fonte ufficiale.
 
+- 2026-11-18 (sera, esecuzione straordinaria) — Tipi di bonus, gruppo 2 (Casa). Nuovo: Agevolazioni prima casa (registro 2% o IVA 4%, credito d'imposta per il riacquisto) — https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/scheda-acquisto-prima-casa/infogen-agevolazioni-acquisto-prima-casa (guida letta: https://www1.agenziaentrate.gov.it/web_app_entrate/guida_acquisto_casa.html)
+- 2026-11-18 — Nuovo: Detrazione interessi mutuo prima casa (fino a 4.000 € di interessi) — https://infoprecompilata.agenziaentrate.gov.it/portale/semplificata-mod-oneri-immobili
+- 2026-11-18 — Nuovo: Sospensione rate del mutuo prima casa (Fondo Consap, mutuo fino a 250.000 €, ISEE fino a 30.000 €) — https://www.consap.it/fondo-di-sospensione-mutui-per-l-acquisto-della-prima-casa/
+- 2026-11-18 — Gruppo 2 tipi di bonus, non inseriti: bonus barriere architettoniche 75% (finito il 31/12/2025), bonus acqua potabile (finito nel 2023), detrazioni inquilini e studenti fuori sede e sismabonus (importi non leggibili sulle pagine ufficiali, da riprovare). Prossimo gruppo: 3.
+- 2026-11-18 — Corretto Salta su!: per superiori e IeFP c'è un contributo di 15 € e serve ISEE 2026 fino a 30.000 € — https://mobilita.regione.emilia-romagna.it/saltasu/come-fare-la-richiesta-di-abbonamento-salta-su
+- 2026-11-18 — Nuovo Comune: Vicenza (LOC, SITI). In arrivo il bonus trasporti di 50 € — https://www.comune.vicenza.it/Novita/Comunicati/Bonus-trasporti-domande-dal-5-al-28-novembre
+- 2026-11-18 — Nuovo Comune: Bolzano (LOC, SITI). Attivi sconto retta scuola dell'infanzia — https://www.comune.bolzano.bz.it/Servizi/Scuole-dell-Infanzia-Chiedere-un-agevolazione-tariffaria — e mensa agevolata — https://www.comune.bolzano.bz.it/Servizi/Mensa-Scuole-elementari-e-medie-Chiedere-un-agevolazione-tariffaria
+- 2026-11-18 — Nuovo Comune: Terni (LOC, SITI). Attivo lo sconto di 100 € sugli abbonamenti bus — https://www.comune.terni.it/novita/comunicati/sconto-di-100-euro-gli-abbonamenti-dei-bus ; in arrivo il contributo famiglie numerose — https://www.comune.terni.it/novita/comunicati/famiglie-numerose-lavviso-2026-laccesso-ai-contributi
+- 2026-11-18 — Nuovo Comune: Novara (LOC, SITI). Attivo il Fondo morosità incolpevole — https://www.comune.novara.it/servizi/fondo-morosita-incolpevole-fimi ; in arrivo iscrizioni e rette nidi — https://www.comune.novara.it/servizi/iscrizione-asili-nido
+- 2026-11-18 — Link precisi aggiunti (8): Salta su!, Assegno di cura Emilia-Romagna, Carta giovani Bella X Noi, Studenti under 26 gratis sulle Unità di Rete (Cotral), Over 70 gratis (Regione Lazio), Impegnativa di cura domiciliare (Veneto), Contributo affitto Sicilia, NIDI (Puglia Sviluppo).
 - 2026-11-18 — Scadenza: Rimborso centri estivi Reggio Calabria chiuso il 18 novembre (ore 12), spostato in "In arrivo".
 - 2026-11-18 — Nuovo Fondo Futuro e Nuovo Fondo Piccolo Credito (Lazio) spostati da "In arrivo" ad "Attivi" con dub:1: la Regione indica l'apertura a sportello dall'11 maggio 2026, il catalogo indicava fine novembre; da verificare su FaRe Lazio — https://regione.lazio.it/notizie/imprese-pacchetto-misure-275
 - 2026-11-18 — Tolto "Bonus vista: occhiali e lenti": nessuna edizione 2026 sulle fonti ufficiali (iscrizioni chiuse il 31/12/2023); era già segnato come dubbio.
