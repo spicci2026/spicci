@@ -1,6 +1,6 @@
 # Comuni da aggiungere (espansione automatica)
 
-L'aggiornamento automatico (lunedì, mercoledì, venerdì) aggiunge **fino a 3 Comuni per esecuzione** da questo elenco, in ordine, poi li sposta in "Fatti".
+L'aggiornamento automatico (lunedì, mercoledì, venerdì) aggiunge **fino a 4 Comuni per esecuzione** da questo elenco, in ordine, poi li sposta in "Fatti". Finiti i capoluoghi, prosegue con gli altri Comuni sopra i 50.000 abitanti (dati ISTAT).
 Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non trovi misure verificabili sul sito ufficiale, spostalo in "Rimandati" con il motivo e passa al successivo.
 
 ## Da fare (in ordine di priorità)
