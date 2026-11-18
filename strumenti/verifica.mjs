@@ -62,6 +62,7 @@ function controllaVoce(x, i, lista, campi) {
   if (x.m !== undefined && typeof x.m !== 'function') errori.push(`${id}: m non è una funzione`);
   if (x.z !== undefined && !territori.has(x.z)) errori.push(`${id}: territorio z="${x.z}" sconosciuto (né Regione né Comune in LOC)`);
   if (x.u !== undefined && (typeof x.u !== 'string' || !/^https:\/\/[^\s"']+\.[a-z]{2,}\//i.test(x.u) )) errori.push(`${id}: link u non valido (serve https://… alla pagina precisa del bonus): ${x.u}`);
+  if (typeof x.u === 'string') { try { const U = new URL(x.u); if (U.pathname.replace(/\//g, '').length < 3 && !U.search) errori.push(`${id}: il link u porta alla home dell'ente, serve la pagina precisa: ${x.u}`); } catch (e) { errori.push(`${id}: link u non leggibile: ${x.u}`); } }
   if (x.k !== undefined && (typeof x.k !== 'string' || !/^[a-z0-9]+(\|[a-z0-9]+)*$/.test(x.k))) errori.push(`${id}: campo k non valido: ${x.k}`);
   const k = lista + '|' + x.t + '|' + (x.z || '');
   if (chiavi.has(k)) errori.push(`${id}: voce duplicata`); chiavi.add(k);
@@ -114,6 +115,8 @@ for (const [nome, over] of profili) {
   if (ok + chk === 0) avvisi.push(`Profilo "${nome}": nessuna misura trovata`);
 }
 
+// Regola del titolare (18/11/2026): ogni misura attiva deve avere il link alla pagina precisa. Senza link, la misura non può stare in ATTIVI.
+S.ATTIVI.forEach((x, i) => { if (!x.u) errori.push(`ATTIVI[${i}] "${x.t}": manca il link u alla pagina ufficiale precisa (trovalo, oppure sposta la misura in ARRIVO)`); });
 const senzaLink = S.ATTIVI.filter((x) => !x.u).length;
 console.log(`Link alla pagina precisa: ${S.ATTIVI.length - senzaLink} misure attive su ${S.ATTIVI.length} (mancano ${senzaLink}).`);
 console.log(`Catalogo: ${S.ATTIVI.length} attive, ${S.ARRIVO.length} in arrivo, ${S.NEWS.length} novità, ${Object.keys(S.LOC).length} Comuni/aree locali, ${S.SITI.length} siti ufficiali.`);
