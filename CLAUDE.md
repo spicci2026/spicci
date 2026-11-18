@@ -14,6 +14,7 @@ Tutto è dentro `index.html`, nel primo `<script>`:
 - **"Ti serve"**: l'elenco dei documenti è ricavato dalle parole di `todo` e `r` (ISEE, SPID o CIE, IBAN, fatture, contratto registrato, PEC, 730). Nomina in `todo` quello che serve davvero.
 - **Stima "Fino a … €"**: somma solo gli importi fissi scritti in `a` (es. "1.000 € per ogni figlio" non conta, "Fino a 1.500 €" conta). Scrivi gli importi come nella fonte, senza gonfiarli.
 - **Sezione "Imprese e partite IVA"**: mostra le misure con `c:"Impresa"`, quelle con `k` che contiene `impresa`, `assumo` o `agri`, e quelle con `imp:1`. Per le nuove misure per imprese, autonomi e professionisti usa `c:"Impresa"`.
+- **Sezione "Pensionati e over 65"**: mostra le misure di ATTIVI e ARRIVO con `pens:1`. Metti `pens:1` alle nuove misure pensate per pensionati e anziani (pensione, assistenza, sconti over 65), anche locali.
 - **Spicci Pro** (`pro.html`): è l'unica pagina commerciale, per professionisti ed enti. L'app per i cittadini resta gratuita, senza pubblicità e senza affiliazioni: non aggiungere prezzi, moduli di pagamento o raccolta di dati senza richiesta del titolare.
 
 ### Sfondi illustrati dei territori
