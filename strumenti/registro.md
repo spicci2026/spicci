@@ -2,6 +2,9 @@
 
 Le righe più recenti in alto. Formato: data — modifica — fonte ufficiale.
 
+- 2026-11-18 — Profilo: le caselle passano da 8 a 26, divise in gruppi (Casa, Famiglia, Lavoro e studio, Salute e assistenza, Spostamenti, Altro), con frasi brevi e generiche. Nuovo campo `k` nelle misure: la misura compare solo se è spuntata la casella giusta (scuola, sport, sfratto, cura, ecc.). Richiesta del titolare.
+- 2026-11-18 — Assegno unico: chi spunta "Aspetto un bambino" vede che l'assegno spetta dal settimo mese di gravidanza e che la domanda si fa dopo la nascita, con gli arretrati — https://www.inps.it/prestazioni-e-servizi/faq-domande-frequenti/assegno-unico-e-universale
+- 2026-11-18 — Contributi per chi assiste un familiare (assegni di cura, caregiver Torino, Palermo, L'Aquila, buono domiciliarità Piemonte, misure B1 e B2 Lombardia, legge caregiver Veneto) ora compaiono a chi spunta "Assisto un familiare" o "Disabilità in famiglia", non più in base all'età di chi usa l'app. Nessun importo o requisito cambiato.
 - 2026-11-18 — Bonus mamme 2026 spostato da "In arrivo" ad "Attivi": domande aperte fino al 31 dicembre 2026, 60 € al mese fino a 720 € (messaggio INPS n. 3343 del 20 ottobre 2026) — https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.nuovo-bonus-mamme-2026.html
 - 2026-11-18 — Bando Neoimpresa Valle d'Aosta scaduto il 15 novembre: spostato in "In arrivo" (nuova edizione da confermare) — https://www.regione.vda.it
 - 2026-11-18 — Nuovo Comune: Messina (LOC, SITI) con contributo mensa scuola dell'infanzia in "In arrivo" — https://www.comune.messina.it/it/news/contributi-per-la-mensa-scolastica-2025-2026-al-via-le-domande-per-le-famiglie-delle-scuole-dellinfanzia

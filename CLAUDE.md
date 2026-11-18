@@ -11,7 +11,14 @@ Tutto è dentro `index.html`, nel primo `<script>`:
 
 ### Funzione `m(p)` per ATTIVI
 Restituisce `null` se la misura non riguarda la persona, `OK("perché", importoFacoltativo)` se probabilmente ne ha diritto, `CHK("perché")` se deve verificare. Helper: `isee(p, soglia, "perché")` (gestisce ISEE sconosciuto), `giovane(p, sud)`.
-Campi del profilo `p`: `eta` (numero), `genere` ('f'|'m'|''), `regione`, `prov` ('Trento'|'Bolzano'|''), `lavoro` ('dipendente'|'autonomo'|'disoccupato'|'studente'|'pensionato'), `nucleo`, `figli`, `isee` (numero o `null` se non lo sa), `comune` (minuscolo), `loc` (chiave di LOC o null), `er` (Emilia-Romagna), `rub` (Rubicone e Mare), e i sì/no `affitto`, `compra`, `lavori`, `impresa`, `under3`, `nato`, `animale`, `elettrico`.
+Campi del profilo `p`: `eta` (numero), `genere` ('f'|'m'|''), `regione`, `prov` ('Trento'|'Bolzano'|''), `lavoro` ('dipendente'|'autonomo'|'disoccupato'|'studente'|'pensionato'), `nucleo`, `figli`, `isee` (numero o `null` se non lo sa), `comune` (minuscolo), `loc` (chiave di LOC o null), `er` (Emilia-Romagna), `rub` (Rubicone e Mare), e i sì/no delle caselle (dal 18/11/2026):
+- Casa: `affitto` (vivo in affitto), `sfratto` (faccio fatica a pagare l'affitto; implica `affitto`), `compra` (vorrei comprare la mia prima casa), `mutuo` (ho già un mutuo), `lavori` (ristrutturo), `caldaia` (caldaia, stufa o pannelli solari).
+- Famiglia: `attesa` (aspetto un bambino), `nato` (figlio nato o adottato dal 2025), `under3`, `scuola` (figli a scuola; vero anche per gli studenti sotto i 20 anni), `sport` (figli che fanno sport o centri estivi), `solo` (genitore solo).
+- Lavoro e studio: `impresa` (vorrei aprire un'attività), `assumo` (vorrei assumere), `agri` (agricoltura), `corso` (corso per trovare lavoro), `uni` (io o un figlio all'università; vero anche per gli studenti dai 18 anni), `estero` (esperienza all'estero).
+- Salute: `cura` (assisto un familiare anziano o non autosufficiente), `disab` (disabilità in famiglia), `psico` (psicologo).
+- Spostamenti e altro: `mezzi` (bus, treni, metro), `auto` (devo cambiare auto), `elettrico`, `animale`, `trasf` (vorrei trasferirmi in un piccolo Comune o al Sud).
+
+Campo facoltativo `k` (in ATTIVI e ARRIVO): la misura compare solo se è spuntata almeno una delle caselle indicate, separate da `|`. Esempi: `k:"scuola"` per libri, borse e mense scolastiche; `k:"sport"` per voucher sport e centri estivi; `k:"scuola|mezzi"` per gli abbonamenti studenti; `k:"sfratto"` per i fondi morosità e sfratti; `k:"cura"` per i contributi ai caregiver. Usalo per le misure che riguardano una situazione precisa. Non serve per quelle che dipendono solo da età, ISEE, figli o territorio: quelle le capisce già `m`. I testi delle caselle restano brevi e generici, senza nomi di bonus o di luoghi.
 Per le misure locali usa sempre `p.loc==='Comune di X'` (o `p.regione==='X'` per le regionali): mai mostrare una misura locale a chi vive altrove.
 
 ## Regole editoriali (obbligatorie)

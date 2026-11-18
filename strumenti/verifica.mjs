@@ -93,6 +93,8 @@ const profili = [
   ['Famiglia numerosa Bari', { regione: 'Puglia', nucleo: '7', figli: '5', comune: 'Bari', isee: '18000' }],
   ['Valle d\'Aosta senza comune', { regione: "Valle d'Aosta", isee: '' }],
   ['Sardegna Cagliari', { regione: 'Sardegna', comune: 'Cagliari', isee: '12000' }],
+  ['Tutte le caselle Bologna', { regione: 'Emilia-Romagna', comune: 'Bologna', figli: '2', nucleo: '4', sfratto: true, mutuo: true, caldaia: true, attesa: true, nato: true, scuola: true, sport: true, solo: true, assumo: true, agri: true, corso: true, uni: true, estero: true, cura: true, disab: true, psico: true, mezzi: true, auto: true, animale: true, trasf: true }],
+  ['Caregiver Palermo in attesa', { eta: '34', regione: 'Sicilia', comune: 'Palermo', lavoro: 'disoccupato', figli: '0', isee: '', attesa: true, cura: true, mezzi: true, impresa: false, lavori: false, affitto: false, under3: false }],
 ];
 const sintesi = [];
 for (const [nome, over] of profili) {
