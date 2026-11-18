@@ -10,7 +10,7 @@ Tutto è dentro `index.html`, nel primo `<script>`:
 - `LOC` — Comuni e aree locali coperti, con i nomi che l'utente può scrivere. `SITI` — elenco [ente, link ufficiale]: `urlFor` prende la **prima** voce il cui nome è contenuto in `e`, quindi le voci specifiche vanno **prima** di quelle generiche.
 
 ### Sfondi illustrati dei territori
-Ogni misura con `z` mostra come sfondo il disegno della sua Regione (i Comuni usano quello della Regione indicata in `LOC`): non serve fare niente quando aggiungi un Comune o un bonus locale. I disegni sono in `SC` (oggetto `S`, una voce per ognuna delle 20 Regioni), in SVG originale: niente foto, niente immagini da altri siti, niente stemmi ufficiali. Non toglierli e non cambiare i colori del tema (`:root`) senza richiesta del titolare.
+Ogni misura con `z` mostra come sfondo il disegno della sua Regione (i Comuni usano quello della Regione indicata in `LOC`): non serve fare niente quando aggiungi un Comune o un bonus locale. I disegni sono in `SC` (oggetto `S`, una voce per ognuna delle 20 Regioni), in SVG originale: niente foto, niente immagini da altri siti, niente stemmi ufficiali. Non toglierli. Il titolare vuole un'app chiara e allegra: un solo tema chiaro (niente tema scuro), non cambiare i colori di `:root` senza sua richiesta.
 
 ### Funzione `m(p)` per ATTIVI
 Restituisce `null` se la misura non riguarda la persona, `OK("perché", importoFacoltativo)` se probabilmente ne ha diritto, `CHK("perché")` se deve verificare. Helper: `isee(p, soglia, "perché")` (gestisce ISEE sconosciuto), `giovane(p, sud)`.

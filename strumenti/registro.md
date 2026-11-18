@@ -2,6 +2,7 @@
 
 Le righe più recenti in alto. Formato: data — modifica — fonte ufficiale.
 
+- 2026-11-18 — Grafica: su richiesta del titolare l'app ha un solo tema chiaro e allegro (fondo crema, corallo e rosa), tolto il tema scuro; anche le schede dei bonus locali sono chiare.
 - 2026-11-18 — Nuova grafica su richiesta del titolare: nuovi colori (terracotta e zafferano su fondo crema o verde scuro, al posto di viola e verde acqua) e sfondi illustrati per le 20 Regioni. Ogni bonus regionale o comunale mostra il disegno della sua Regione; lo stesso nell'elenco e nella pagina delle Regioni e nel riquadro "Per te". Disegni originali in SVG, nessuna immagine esterna. Nessuna misura modificata.
 - 2026-11-18 (terzo giro, chiesto dal titolare) — Tipi di bonus, gruppo 3 (Lavoro e formazione). Nuovo: DIS-COLL (fino a 1.584,70 € al mese nel 2026) — https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.dis-coll-indennit-mensile-di-disoccupazione-50183.dis-coll-indennit-mensile-di-disoccupazione.html
 - 2026-11-18 — Nuovo: Servizio civile, bando Corpi civili di pace (519,47 € al mese, domande entro il 4 dicembre 2026) — https://www.politichegiovanili.gov.it/comunicazione/avvisi-e-bandi/servizio-civile/bandi-di-selezione-volontari/bando-ccp-2026/

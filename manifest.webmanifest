@@ -13,8 +13,8 @@
   "minimal-ui"
  ],
  "orientation": "portrait",
- "background_color": "#121a17",
- "theme_color": "#d9481f",
+ "background_color": "#fff8ec",
+ "theme_color": "#f4511e",
  "categories": [
   "finance",
   "lifestyle",
