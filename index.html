@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spicci · Scopri i bonus che ti spettano</title>
 <meta name="description" content="Bonus, fondi e agevolazioni di Stato, Regioni e Comuni scelti per te in 30 secondi. Gratis, senza registrazione: i tuoi dati restano sul telefono.">
-<meta name="theme-color" content="#7c5cff">
+<meta name="theme-color" content="#d9481f">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
@@ -19,12 +19,12 @@
 <meta property="og:image" content="icons/icon-512.png">
 <style>
   :root{
-    --bg:#0e0f14; --card:#181a22; --card2:#20232e; --ink:#f4f5f8; --muted:#9aa0b4; --line:#2a2e3c;
-    --a1:#7c5cff; --a2:#19d3a2; --ok:#19d3a2; --ok-soft:#10342c; --warn:#ffc857; --warn-soft:#3a2f12; --soon:#6fb1ff; --soon-soft:#14263d;
+    --bg:#121a17; --card:#1a2420; --card2:#23312b; --ink:#f6f3ea; --muted:#a3ada5; --line:#2d3b34;
+    --a1:#ff7a45; --a2:#ffc24b; --g1:#e2542a; --g2:#a62a4d; --ok:#4fd69c; --ok-soft:#12392c; --warn:#ffc857; --warn-soft:#3a2f12; --soon:#7fb8ff; --soon-soft:#16293f;
   }
   @media (prefers-color-scheme: light){
-    :root{ --bg:#f3f2f8; --card:#ffffff; --card2:#f0eefb; --ink:#14151c; --muted:#5f6478; --line:#e2e0ee;
-      --a1:#5b3df5; --a2:#0a9d78; --ok:#0a7d60; --ok-soft:#dff5ee; --warn:#8a5a00; --warn-soft:#fdf0cf; --soon:#1f5fae; --soon-soft:#e2eefc; }
+    :root{ --bg:#faf5ea; --card:#fffdf8; --card2:#f3ebd9; --ink:#1c2420; --muted:#5d665f; --line:#e6dcc6;
+      --a1:#d9481f; --a2:#9a5b00; --g1:#d9481f; --g2:#9c2748; --ok:#0a7d60; --ok-soft:#dff5ee; --warn:#8a5a00; --warn-soft:#fdf0cf; --soon:#1f5fae; --soon-soft:#e2eefc; }
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -35,7 +35,8 @@
   h1 span{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
   .sub{color:var(--muted);margin:0 0 16px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px}
-  .hero{background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border:0}
+  .hero{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border:0;position:relative;overflow:hidden}
+  .hero>*{position:relative}
   .hero .n{font-size:48px;font-weight:900;line-height:1}
   .hero .l{font-size:15px;opacity:.95}
   .pill{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px}
@@ -52,7 +53,7 @@
   .chkintro{margin:16px 0 0;font-size:14px;color:var(--muted)}
   .chkh{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:4px 2px 0}
   button{font:inherit;cursor:pointer;border:0}
-  .cta{width:100%;margin-top:16px;padding:15px;border-radius:14px;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(90deg,var(--a1),var(--a2))}
+  .cta{width:100%;margin-top:16px;padding:15px;border-radius:14px;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(90deg,var(--g1),var(--g2))}
   .link{background:none;color:var(--muted);text-decoration:underline;font-size:13px;margin-top:12px;padding:6px 0}
   .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
   .chips::-webkit-scrollbar{display:none}
@@ -86,6 +87,24 @@
   .fcard .btns{display:flex;gap:8px;margin-top:14px;position:relative;flex-wrap:wrap}
   .fcard .btn{flex:1;min-width:130px;text-align:center;background:#fff;color:#111;font-weight:800;border-radius:14px;padding:12px 10px;text-decoration:none;font-size:15px}
   .fcard .btn.sec{background:rgba(255,255,255,.2);color:#fff}
+  .scene{position:absolute;inset:0;pointer-events:none}
+  .scene svg{width:100%;height:100%;display:block}
+  .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.3) 45%,rgba(0,0,0,0) 75%);pointer-events:none}
+  .fcard.terr{min-height:0;padding-top:196px;background:#17211d;justify-content:flex-start}
+  .fcard.terr>.scene{inset:0 0 auto 0;height:190px}
+  .fcard.terr::after{content:"";position:absolute;left:0;right:0;top:0;height:192px;background:linear-gradient(to bottom,rgba(0,0,0,.3) 0,rgba(0,0,0,0) 70px,rgba(23,33,29,0) 130px,#17211d 190px);pointer-events:none}
+  .fcard.terr>*:not(.scene){z-index:1}
+  .fcard.terr .big{font-size:26px}
+  .fcard.terr .tag{background:rgba(0,0,0,.5)} .fcard.terr .tag.me{background:#fff}
+  .hero .scene{opacity:.55}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(0,0,0,.05));pointer-events:none}
+  .hero .n,.hero .l{z-index:1;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+  .banner{position:relative;overflow:hidden;border-radius:24px;height:210px;margin-bottom:14px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+  .banner h2{position:relative;z-index:1;margin:0;font-size:30px;font-weight:900;letter-spacing:-.02em;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+  .banner .k{position:relative;z-index:1;font-size:14px;opacity:.95}
+  .reg .th{flex:none;width:64px;height:44px;border-radius:10px;overflow:hidden;position:relative}
+  .item.terr{padding-top:0;overflow:hidden}
+  .item.terr .strip{position:relative;height:84px;margin:0 -16px 12px}
   .golink{display:inline-block;margin-top:10px;font-weight:800;color:var(--a2);text-decoration:none}
   nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));z-index:5}
   nav .in{max-width:680px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:2px}
@@ -101,7 +120,7 @@
   .subh{font-size:15px;font-weight:800;margin:18px 0 10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
   [hidden]{display:none!important}
   .brand{display:flex;align-items:center;justify-content:space-between;gap:10px}
-  .installbtn{background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border:0;border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px;cursor:pointer}
+  .installbtn{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border:0;border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px;cursor:pointer}
   .ioshint{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0;font-size:14px;display:flex;gap:10px;align-items:flex-start}
   .ioshint button{background:none;border:0;color:var(--muted);font-size:18px;cursor:pointer;margin-left:auto}
   .foot a{color:var(--muted);text-decoration:underline}
@@ -847,6 +866,50 @@
    {d:"Dal 2027",t:"Cosa potrebbe arrivare: 100 € al mese alle mamme lavoratrici e fringe benefit più alti",p:"Sono misure contenute nel disegno di legge di bilancio: diventano definitive solo dopo l'approvazione.",src:"Il Sole 24 Ore, Leggo"}
   ];
 
+  // SCENE — illustrazione di sfondo per ogni Regione (i Comuni usano quella della loro Regione). Disegni originali in SVG, nessuna immagine esterna.
+  var SC=(function(){
+    function P(d,f,o){ return '<path d="'+d+'" fill="'+f+'"'+(o?' opacity="'+o+'"':'')+'/>'; }
+    function R(x,y,w,h,f,o){ return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(o?' opacity="'+o+'"':'')+'/>'; }
+    function C(x,y,r,f,o){ return '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+f+'"'+(o?' opacity="'+o+'"':'')+'/>'; }
+    function E(x,y,rx,ry,f){ return '<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" fill="'+f+'"/>'; }
+    function alpi(f,y){ y=y||0; return P('M0 '+(190+y)+' L45 '+(118+y)+' L78 '+(150+y)+' L125 '+(78+y)+' L165 '+(140+y)+' L205 '+(92+y)+' L250 '+(150+y)+' L292 '+(98+y)+' L340 '+(150+y)+' L400 '+(108+y)+' V300 H0Z',f)
+      + P('M125 '+(78+y)+' l-15 23 l10 -5 l6 8 l7 -9 l9 5Z M205 '+(92+y)+' l-12 18 l8 -4 l5 7 l6 -8 l7 4Z M292 '+(98+y)+' l-12 18 l8 -4 l5 7 l6 -8 l8 5Z','#fff',.85); }
+    function colli(y,f,a){ a=a||34; return P('M0 '+y+' Q100 '+(y-a)+' 200 '+y+' T400 '+y+' V300 H0Z',f); }
+    function colli2(y,f){ return P('M0 '+(y+10)+' Q70 '+(y-30)+' 150 '+(y-5)+' T300 '+(y-18)+' T400 '+y+' V300 H0Z',f); }
+    function mare(y,f,l){ return R(0,y,400,300-y,f)+P('M0 '+(y+14)+' q25 -8 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 v3 q-25 -8 -50 0 t-50 0 t-50 0 t-50 0 t-50 0 t-50 0 t-50 0 t-50 0Z',l||'#fff',.35)
+      + P('M30 '+(y+38)+' q20 -6 40 0 t40 0 t40 0 v3 q-20 -6 -40 0 t-40 0 t-40 0Z M220 '+(y+52)+' q20 -6 40 0 t40 0 t40 0 v3 q-20 -6 -40 0 t-40 0 t-40 0Z',l||'#fff',.25); }
+    function cip(x,y,h,f){ return E(x,y-h/2,h/7,h/2,f); }
+    function sole(x,y,r,f){ return C(x,y,r*1.9,f,.18)+C(x,y,r*1.4,f,.28)+C(x,y,r,f); }
+    function torre(x,y,w,h,f){ return R(x,y-h,w,h,f)+P('M'+(x-2)+' '+(y-h)+' h'+(w+4)+' v-5 h-'+((w+4)/5)+' v3 h-'+((w+4)/5)+' v-3 h-'+((w+4)/5)+' v3 h-'+((w+4)/5)+' v-3 h-'+((w+4)/5)+'Z',f); }
+    function casa(x,y,w,h,f,t){ return R(x,y-h,w,h,f)+P('M'+(x-2)+' '+(y-h)+' l'+(w/2+2)+' -'+(w/3)+' l'+(w/2+2)+' '+(w/3)+'Z',t||f); }
+    var S={
+      "Valle d'Aosta":['#2b4c8c','#9fc3ea', function(){ return sole(320,58,16,'#fff4c9')+alpi('#5f7fb0',-20)+alpi('#2f456f',26)+torre(150,196,16,44,'#1c2740')+R(166,170,60,26,'#1c2740')+torre(226,196,18,56,'#1c2740')+P('M222 140 l13 -20 l13 20Z','#8f2f2a')+colli(210,'#24543a',18); }],
+      "Piemonte":['#3a3f7a','#f2a66b', function(){ return sole(90,70,15,'#ffe2a8')+alpi('#6b6fa6',-10)+colli(196,'#3f5d3c',22)+R(170,150,60,46,'#22263f')+P('M166 150 h68 l-10 -22 h-48Z','#22263f')+P('M190 128 h20 l-7 -44 h-6Z','#22263f')+P('M197 84 h6 l-3 -40Z','#22263f')+colli2(232,'#2b4429'); }],
+      "Lombardia":['#294a66','#e9c58f', function(){ return sole(310,64,14,'#fff0c4')+alpi('#58779a',0)+R(120,146,160,54,'#e9e2d3')+P('M120 146 l80 -44 l80 44Z','#e9e2d3')+P('M132 146 l4 -40 l4 40Z M156 136 l4 -44 l4 44Z M180 122 l4 -44 l4 44Z M196 108 l4 -52 l4 52Z M212 122 l4 -44 l4 44Z M236 136 l4 -44 l4 44Z M260 146 l4 -40 l4 40Z','#f6f0e2')+R(190,166,20,34,'#7a6a55')+colli(204,'#2f5a43',10); }],
+      "Trentino-Alto Adige":['#3c2a5e','#f39a7a', function(){ return sole(200,72,18,'#ffd9a0')+P('M0 180 L40 150 L52 92 L70 86 L82 110 L98 70 L118 64 L130 104 L150 96 L165 150 L210 140 L228 84 L246 76 L258 100 L276 60 L296 66 L306 110 L330 100 L345 150 L400 140 V300 H0Z','#e59a8a')+P('M0 200 L60 160 L110 190 L170 150 L230 190 L300 156 L400 196 V300 H0Z','#3f4f6b')+colli(214,'#2d5a3d',16)+P('M60 214 l8 -26 l8 26Z M90 220 l9 -30 l9 30Z M300 216 l8 -26 l8 26Z M330 222 l9 -30 l9 30Z','#1b3a28'); }],
+      "Veneto":['#21506e','#f3b98d', function(){ return sole(310,70,16,'#ffe9b8')+R(60,84,22,100,'#b8573d')+P('M56 84 h30 l-15 -34Z','#3d6b58')+R(90,140,90,44,'#e8d9c0')+P('M90 140 q15 -22 30 0 q15 -22 30 0 q15 -22 30 0Z','#cdb894')+R(230,150,110,34,'#d98b6a')+R(244,158,10,14,'#7a3f2e')+R(268,158,10,14,'#7a3f2e')+R(292,158,10,14,'#7a3f2e')+R(316,158,10,14,'#7a3f2e')+mare(184,'#2f7f8f')+P('M150 214 q50 -44 100 0 h-12 q-38 -30 -76 0Z','#f2e6cf')+P('M110 236 q30 10 60 0 l6 -10 l-4 12 q-32 10 -60 2Z','#15252b'); }],
+      "Friuli-Venezia Giulia":['#1f4b73','#bfe0ee', function(){ return sole(80,60,14,'#fff6d2')+alpi('#6c8fb3',-16)+P('M230 190 L400 150 V300 H230Z','#d9d2c3')+R(290,112,56,52,'#f4efe4')+torre(300,112,14,22,'#f4efe4')+torre(330,118,12,30,'#f4efe4')+R(306,130,8,12,'#5f6f86')+R(322,130,8,12,'#5f6f86')+mare(190,'#2c6f9c')+P('M230 190 L400 150 V200 L260 230Z','#bfb7a6'); }],
+      "Liguria":['#1d5c8a','#ffd9a8', function(){ return sole(330,70,16,'#fff1c9')+colli2(150,'#3d7a52')+casa(40,180,26,60,'#f28f6b','#a84e35')+casa(68,180,24,74,'#f6cf6b','#a84e35')+casa(94,180,26,54,'#e86a75','#a84e35')+casa(122,180,24,66,'#f2b36b','#a84e35')+casa(148,180,26,50,'#f4e2b0','#a84e35')+R(300,96,12,84,'#f6f1e6')+R(296,90,20,8,'#c8432f')+P('M298 90 l8 -12 l8 12Z','#2a2f3a')+R(300,120,12,10,'#c8432f')+R(300,146,12,10,'#c8432f')+P('M270 190 q36 -22 72 0Z','#5a5348')+mare(180,'#1f78a6'); }],
+      "Emilia-Romagna":['#7a2f3a','#f6b56d', function(){ return sole(96,70,16,'#ffe6b0')+colli(170,'#8a5a3c',16)+torre(176,196,16,138,'#9e3e2c')+P('M214 196 l6 -92 l16 2 l-2 90Z','#b5553a')+R(60,150,90,46,'#c46a45')+P('M60 196 v-28 q11 -14 22 0 v28Z M90 196 v-28 q11 -14 22 0 v28Z M120 196 v-28 q11 -14 22 0 v28Z','#7a2f22')+R(250,156,100,40,'#d07e52')+P('M250 156 l50 -20 l50 20Z','#8f3b28')+colli(206,'#5b6b2e',10)+P('M0 232 q100 -16 200 0 t200 0 V300 H0Z','#d9a441'); }],
+      "Toscana":['#c9562c','#fbd28a', function(){ return sole(300,74,18,'#fff0c0')+colli(150,'#b0a04a',30)+colli2(184,'#8a9a3c')+cip(70,170,54,'#24482e')+cip(92,176,44,'#24482e')+cip(114,172,50,'#24482e')+R(220,138,46,30,'#e9d7b0')+P('M216 138 l27 -16 l27 16Z','#b5553a')+cip(280,166,40,'#24482e')+cip(206,168,36,'#24482e')+colli(214,'#6f8a33',26)+P('M0 250 Q120 214 240 244 T400 236','none')+P('M150 300 q20 -50 90 -72 q-50 30 -40 72Z','#e9d9a8',.7); }],
+      "Umbria":['#4a5f3a','#f2d59a', function(){ return sole(84,66,15,'#fff3c8')+colli(140,'#7d9a56',26)+P('M110 190 Q200 110 290 190Z','#5d7a3e')+R(160,128,80,30,'#d9c3a0')+torre(168,128,12,26,'#d9c3a0')+torre(214,128,14,38,'#cdb48c')+casa(184,128,24,16,'#e6d3b3','#a8573c')+R(150,150,100,14,'#c7ae88')+cip(132,176,34,'#274a2c')+cip(268,178,36,'#274a2c')+colli2(208,'#3f6634')+P('M0 240 q100 -18 200 0 t200 0 V300 H0Z','#31552b'); }],
+      "Marche":['#2a6b8f','#f7d7a6', function(){ return sole(310,62,15,'#fff2c6')+colli(150,'#9fb35a',24)+colli2(176,'#7d9a45')+R(90,138,40,26,'#e2cfa8')+torre(104,138,12,22,'#d3bd92')+P('M250 196 L290 120 Q330 96 400 110 V196Z','#e9e1cf')+P('M290 120 Q330 96 400 110 v12 Q336 110 300 132Z','#5f8a45')+mare(190,'#2a86a8')+P('M196 214 q10 -30 20 0Z','#e9e1cf'); }],
+      "Lazio":['#6a3a5c','#f6b77a', function(){ return sole(200,96,22,'#ffe2a6')+colli(176,'#7a5a4a',14)+P('M90 196 v-70 q0 -10 10 -10 h200 q10 0 10 10 v70Z','#d9bf99')+P('M104 196 v-22 q9 -12 18 0 v22Z M134 196 v-22 q9 -12 18 0 v22Z M164 196 v-22 q9 -12 18 0 v22Z M194 196 v-22 q9 -12 18 0 v22Z M224 196 v-22 q9 -12 18 0 v22Z M254 196 v-22 q9 -12 18 0 v22Z M284 196 v-22 q9 -12 18 0 v22Z M104 160 v-18 q9 -12 18 0 v18Z M134 160 v-18 q9 -12 18 0 v18Z M164 160 v-18 q9 -12 18 0 v18Z M194 160 v-18 q9 -12 18 0 v18Z M224 160 v-18 q9 -12 18 0 v18Z','#6b4a3a')+P('M250 116 h60 v40 l-14 -8 l-10 6 l-8 -22 l-12 4 l-16 -20Z','#f6b77a')+P('M40 196 q-4 -40 12 -52 q-14 4 -22 -6 q14 -6 24 0 q-4 -14 6 -22 q6 12 0 22 q12 -8 24 0 q-10 8 -22 6 q12 14 6 52Z','#2f4a30')+colli(208,'#4a5a30',8); }],
+      "Abruzzo":['#27466b','#cfe3ee', function(){ return sole(330,60,14,'#fff6d6')+P('M0 180 L70 120 L120 150 L190 60 L230 110 L260 90 L320 150 L400 120 V300 H0Z','#7f93ad')+P('M190 60 l-22 30 l14 -6 l8 12 l10 -14 l14 10Z M260 90 l-12 16 l8 -3 l6 8 l8 -8Z','#fff',.9)+colli(186,'#3f6b45',26)+P('M40 200 l9 -30 l9 30Z M70 206 l10 -34 l10 34Z M310 204 l9 -30 l9 30Z','#234a2e')+colli2(224,'#2f5a38')+mare(256,'#2c7ea6'); }],
+      "Molise":['#5a6b3a','#f4d9a0', function(){ return sole(300,64,15,'#fff2c4')+colli(150,'#9aa85a',28)+colli2(182,'#7c9048')+R(176,108,16,64,'#d8c4a0')+P('M172 108 h24 l-12 -26Z','#a8573c')+R(180,120,8,12,'#5a4636')+casa(150,172,26,22,'#e6d3b3','#a8573c')+casa(196,172,30,26,'#dcc6a2','#a8573c')+casa(228,172,22,18,'#e9d9bd','#a8573c')+colli(206,'#5f7a36',20)+P('M0 240 q100 -18 200 0 t200 0 V300 H0Z','#d2b24a'); }],
+      "Campania":['#8a3a5a','#f9b77a', function(){ return sole(84,74,17,'#ffe3a8')+P('M90 190 L170 96 Q180 104 190 96 L206 110 Q216 104 226 108 L320 190Z','#5a4a6b')+P('M170 96 Q180 104 190 96 q-8 -18 0 -30 q-18 6 -20 30Z','#fff',.35)+P('M226 108 q10 -26 30 -30 q-14 12 -12 34Z','#fff',.2)+colli(186,'#4a6b4a',10)+casa(30,196,22,30,'#f6cf8a','#a84e35')+casa(54,196,20,40,'#f29a7a','#a84e35')+casa(76,196,22,26,'#f4e2b0','#a84e35')+mare(196,'#2a6f9c')+P('M260 226 l40 0 l-8 10 h-24Z','#f4efe4')+P('M278 226 v-26 l16 22Z','#f4efe4'); }],
+      "Puglia":['#2a7fa6','#fbe3b0', function(){ return sole(320,62,18,'#fff4c6')+colli(170,'#b8a86a',10)+R(70,150,50,40,'#f6f1e6')+P('M64 150 q31 -70 62 0Z','#8a8478')+C(95,104,4,'#f6f1e6')+R(130,158,44,32,'#f6f1e6')+P('M124 158 q28 -60 56 0Z','#9a9488')+C(152,118,4,'#f6f1e6')+R(184,152,48,38,'#f6f1e6')+P('M178 152 q30 -66 60 0Z','#8a8478')+C(208,108,4,'#f6f1e6')+R(90,170,10,20,'#5a4636')+R(148,174,9,16,'#5a4636')+R(204,170,10,20,'#5a4636')+P('M280 190 q-6 -34 10 -44 q-16 0 -24 -10 q16 -6 26 2 q-2 -16 10 -22 q6 12 -2 22 q14 -6 26 2 q-10 10 -24 8 q12 12 4 42Z','#4f6b3a')+colli(196,'#c9a24a',8)+mare(232,'#1f8fb5'); }],
+      "Basilicata":['#5a3f6b','#f3b58a', function(){ return sole(310,66,16,'#ffe6b4')+P('M0 196 L60 150 L340 150 L400 196Z','#b89a7a')+casa(70,150,30,26,'#e9d9bd','#c7ae88')+casa(104,150,26,38,'#dcc6a2','#c7ae88')+casa(134,150,32,30,'#f0e2c8','#c7ae88')+casa(170,150,26,46,'#dcc6a2','#c7ae88')+R(202,84,14,66,'#d3bd92')+P('M198 84 h22 l-11 -22Z','#b89a7a')+casa(220,150,30,34,'#e9d9bd','#c7ae88')+casa(254,150,26,24,'#f0e2c8','#c7ae88')+casa(284,150,30,36,'#dcc6a2','#c7ae88')+P('M60 196 h280 v-30 h-280Z','#cdb48c')+R(84,172,8,12,'#4a3a30')+R(120,174,8,10,'#4a3a30')+R(160,172,8,12,'#4a3a30')+R(236,174,8,10,'#4a3a30')+R(300,172,8,12,'#4a3a30')+colli(204,'#8a7a4a',10)+P('M0 236 q100 -14 200 0 t200 0 V300 H0Z','#6b6a3a'); }],
+      "Calabria":['#1f5f8f','#f8c79a', function(){ return sole(96,70,18,'#ffe8b4')+P('M210 196 L250 110 L290 96 L330 120 L400 90 V196Z','#5f7a4a')+P('M250 110 L290 96 L330 120 L400 90 V110 L332 136 L292 114 L262 126Z','#8aa35a')+R(296,70,18,30,'#d9c3a0')+P('M292 70 h26 v-6 h-6 v3 h-4 v-3 h-6 v3 h-4 v-3 h-6Z','#d9c3a0')+mare(190,'#1f86b5')+P('M150 226 q10 -22 20 0Z M176 232 q7 -16 14 0Z','#4a5a4a'); }],
+      "Sicilia":['#b5462a','#fbcf8a', function(){ return sole(320,70,18,'#fff0bc')+P('M60 190 L190 70 Q200 78 210 70 L340 190Z','#6b5a7a')+P('M190 70 Q200 78 210 70 l14 14 q-12 6 -24 -2 q-10 8 -20 2Z','#fff',.85)+P('M200 66 q-10 -24 6 -40 q-2 16 10 22 q-12 4 -16 18Z','#fff',.35)+colli(186,'#8a9a45',10)+R(60,160,90,8,'#e9d9bd')+R(64,168,6,28,'#e9d9bd')+R(80,168,6,28,'#e9d9bd')+R(96,168,6,28,'#e9d9bd')+R(112,168,6,28,'#e9d9bd')+R(128,168,6,28,'#e9d9bd')+R(142,168,6,28,'#e9d9bd')+P('M56 160 l49 -18 l49 18Z','#e9d9bd')+C(300,180,8,'#f2901f')+C(316,186,7,'#f2901f')+E(308,170,22,12,'#3f6b35')+mare(200,'#1f86b5'); }],
+      "Sardegna":['#147a8f','#fde8b8', function(){ return sole(84,64,17,'#fff6cc')+colli(160,'#a8a06a',16)+P('M170 180 L186 100 H226 L242 180Z','#8a7a66')+P('M186 100 h40 v-8 h-40Z','#75675a')+R(200,150,12,30,'#3a3028')+P('M176 150 h60 M180 130 h52 M184 112 h44','none')+P('M250 180 L258 140 H282 L290 180Z','#96866f')+P('M300 190 q-4 -30 12 -40 q-14 2 -20 -8 q14 -4 22 2 q0 -12 10 -16 q4 10 -2 18 q12 -4 20 4 q-10 6 -20 4 q8 12 2 36Z','#4f7a45')+colli(190,'#d9c48a',8)+P('M0 214 q100 -10 200 0 t200 0 V300 H0Z','#f6e7bd')+mare(232,'#19a3b5','#fff'); }]
+    };
+    var nsc=0; function svg(r){ var s=S[r]; if(!s) return ''; var id='sc'+(++nsc);
+      return '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+s[0]+'"/><stop offset=".75" stop-color="'+s[1]+'"/></linearGradient></defs><rect width="400" height="300" fill="url(#'+id+')"/>'+s[2]()+'</svg>'; }
+    return {svg:svg, col:function(r){ return S[r]?S[r][0]:null; }};
+  })();
+  function regDi(z){ return z ? (LOC[z] ? LOC[z].reg : z) : null; }
+  function scena(r,cls){ var d=el('div',cls||'scene'); d.innerHTML=SC.svg(r); return d; }
   function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
   function row(label,text){ var r=el('div','row'); r.appendChild(el('b',null,label+' ')); r.appendChild(document.createTextNode(text)); return r; }
   function head(x){ var top=el('div','top'); top.appendChild(el('div','ico',ICO[x.c]||'💶')); var b=el('div'); b.appendChild(el('h3',null,x.t)); b.appendChild(el('div','cat',x.c)); top.appendChild(b); return top; }
@@ -856,7 +919,7 @@
   function altrove(x){ if(!profilo||!x.z) return false; if(LOC[x.z]) return profilo.loc!==x.z; return x.z!==profilo.regione; }
 
   function cardAttivo(x,res,full){
-    var c=el('div','card item');
+    var c=el('div','card item'); striscia(c,x);
     if(res) c.appendChild(el('span','pill '+(res.s==='ok'?'b-ok':'b-check'), res.s==='ok'?'Potresti averne diritto':'Da verificare'));
     var h=head(x); if(res) h.style.marginTop='10px'; c.appendChild(h);
     c.appendChild(el('div','amount',(res&&res.amount)||x.a));
@@ -874,8 +937,10 @@
   function linkDi(x){ return x.u || urlFor(x.e||''); }
 
   function cardFeed(x,res){
-    var c=el('article','fcard'); c.style.background='linear-gradient(145deg,'+(GRAD[x.c]||'#444,#888')+')';
-    c.appendChild(el('div','art',ICO[x.c]||'💶')); c.appendChild(el('div','art2',x.i||ICO[x.c]||'💶'));
+    var c=el('article','fcard'), rz=regDi(x.z);
+    if(rz&&SC.col(rz)){ c.className='fcard terr'; c.appendChild(scena(rz)); }
+    else { c.style.background='linear-gradient(145deg,'+(GRAD[x.c]||'#444,#888')+')'; c.appendChild(el('div','art',ICO[x.c]||'💶')); }
+    c.appendChild(el('div','art2',x.i||ICO[x.c]||'💶'));
     var tags=el('div','tags');
     if(res) tags.appendChild(el('span','tag me',res.s==='ok'?'Fa per te':'Forse fa per te'));
     if(x.dub) tags.appendChild(el('span','tag','Fonti discordi'));
@@ -901,6 +966,8 @@
 
   function renderPerte(){
     var L=$('listPerte'); L.textContent='';
+    var H=$('heroN').parentNode; if(H&&H.querySelector&&H.insertBefore){ var old=H.querySelector('.scene'); if(old&&old.parentNode===H) H.removeChild(old);
+      if(profilo&&SC.col(profilo.regione)) H.insertBefore(scena(profilo.regione),H.firstChild); }
     if(!profilo){ $('heroN').textContent='?'; $('heroL').textContent='Compila il profilo per vedere i bonus fatti per te.'; return; }
     var hits=[]; ATTIVI.forEach(function(x){ var r=match(x); if(r) hits.push({x:x,r:r}); });
     hits.sort(function(a,b){ return (a.r.s==='ok'?0:1)-(b.r.s==='ok'?0:1); });
@@ -944,7 +1011,8 @@
     list.sort(function(a,b){ return (a.me?0:1)-(b.me?0:1); });
     list.forEach(function(o){ L.appendChild(cardArrivo(o.x,o.me)); });
   }
-  function cardArrivo(x,me){ var c=el('div','card item');
+  function striscia(c,x){ var rz=regDi(x.z); if(rz&&SC.col(rz)){ c.className+=' terr'; c.appendChild(scena(rz,'scene strip')); } }
+  function cardArrivo(x,me){ var c=el('div','card item'); striscia(c,x);
       c.appendChild(el('span','pill b-soon',x.w)); if(me){ var p=el('span','pill b-ok','Ti riguarda'); p.style.marginLeft='6px'; c.appendChild(p); }
       var h=head(x); h.style.marginTop='10px'; c.appendChild(h);
       if(x.z){ var zt=el('span','pill b-check','📍 '+x.z); zt.style.marginLeft='6px'; c.appendChild(zt); }
@@ -959,7 +1027,7 @@
     REGIONI.forEach(function(r){
       var na=ATTIVI.filter(function(x){ return diRegione(x,r)||diComuni(x,r); }).length;
       var nf=ARRIVO.filter(function(x){ return diRegione(x,r)||diComuni(x,r); }).length;
-      var b=el('button','reg'); b.type='button';
+      var b=el('button','reg'); b.type='button'; b.appendChild(scena(r,'scene th'));
       var n=el('span','n',r); n.appendChild(el('span','k', na+(na===1?' attivo':' attivi')+' · '+nf+' in arrivo')); b.appendChild(n);
       if(profilo&&profilo.regione===r) b.appendChild(el('span','mia','La tua'));
       b.appendChild(el('span','go','›'));
@@ -970,7 +1038,7 @@
   function apriRegione(r){
     var D=$('regDetail'); D.textContent=''; $('regList').hidden=true; D.hidden=false;
     var back=el('button','back','‹ Tutte le Regioni'); back.type='button'; back.addEventListener('click',renderRegioni); D.appendChild(back);
-    D.appendChild(el('h2',null,r));
+    var bn=el('div','banner'); bn.style.background=SC.col(r)||'#444'; bn.appendChild(scena(r)); bn.appendChild(el('h2',null,r)); D.appendChild(bn);
     var att=ATTIVI.filter(function(x){ return diRegione(x,r); }), fut=ARRIVO.filter(function(x){ return diRegione(x,r); });
     var catt=ATTIVI.filter(function(x){ return diComuni(x,r); }), cfut=ARRIVO.filter(function(x){ return diComuni(x,r); });
     var mia=!!(profilo&&profilo.regione===r);

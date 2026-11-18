@@ -9,6 +9,9 @@ Tutto è dentro `index.html`, nel primo `<script>`:
 - `NEWS` — novità (massimo ~12). Campi: `d` data/scadenza breve, `t`, `p` testo, `src` fonte; `reg:"Regione"` o `loc:true` per le novità locali.
 - `LOC` — Comuni e aree locali coperti, con i nomi che l'utente può scrivere. `SITI` — elenco [ente, link ufficiale]: `urlFor` prende la **prima** voce il cui nome è contenuto in `e`, quindi le voci specifiche vanno **prima** di quelle generiche.
 
+### Sfondi illustrati dei territori
+Ogni misura con `z` mostra come sfondo il disegno della sua Regione (i Comuni usano quello della Regione indicata in `LOC`): non serve fare niente quando aggiungi un Comune o un bonus locale. I disegni sono in `SC` (oggetto `S`, una voce per ognuna delle 20 Regioni), in SVG originale: niente foto, niente immagini da altri siti, niente stemmi ufficiali. Non toglierli e non cambiare i colori del tema (`:root`) senza richiesta del titolare.
+
 ### Funzione `m(p)` per ATTIVI
 Restituisce `null` se la misura non riguarda la persona, `OK("perché", importoFacoltativo)` se probabilmente ne ha diritto, `CHK("perché")` se deve verificare. Helper: `isee(p, soglia, "perché")` (gestisce ISEE sconosciuto), `giovane(p, sud)`.
 Campi del profilo `p`: `eta` (numero), `genere` ('f'|'m'|''), `regione`, `prov` ('Trento'|'Bolzano'|''), `lavoro` ('dipendente'|'autonomo'|'disoccupato'|'studente'|'pensionato'), `nucleo`, `figli`, `isee` (numero o `null` se non lo sa), `comune` (minuscolo), `loc` (chiave di LOC o null), `er` (Emilia-Romagna), `rub` (Rubicone e Mare), e i sì/no delle caselle (dal 18/11/2026):
