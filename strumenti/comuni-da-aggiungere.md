@@ -4,9 +4,6 @@ L'aggiornamento automatico (lunedì, mercoledì, venerdì) aggiunge **fino a 4 C
 Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non trovi misure verificabili sul sito ufficiale, spostalo in "Rimandati" con il motivo e passa al successivo.
 
 ## Da fare (in ordine di priorità)
-- Piacenza (Emilia-Romagna)
-- Andria, Barletta, Trani (Puglia)
-- Udine (Friuli-Venezia Giulia)
 - Arezzo (Toscana)
 - Cesena (Emilia-Romagna)
 - Lecce (Puglia)
@@ -69,6 +66,10 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 - Urbino (Marche)
 
 ## Fatti
+- Piacenza (Emilia-Romagna) — 2026-11-18
+- Andria (Puglia) — 2026-11-18
+- Trani (Puglia) — 2026-11-18
+- Udine (Friuli-Venezia Giulia) — 2026-11-18
 - Vicenza (Veneto) — 2026-11-18
 - Bolzano (Trentino-Alto Adige) — 2026-11-18
 - Terni (Umbria) — 2026-11-18
@@ -81,4 +82,5 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 - Parma (Emilia-Romagna) — 2026-11-18
 
 ## Rimandati
+- Barletta (Puglia) — 2026-11-18: trovate solo le tariffe mensa 2025/26 (delibera di Giunta n. 4/2025), nessun documento ufficiale 2026/27; riprovare più avanti
 - Catania (Sicilia) — 2026-11-18: il sito ufficiale www.comune.catania.it blocca la lettura automatica (robots.txt), misure non verificabili; riprovare più avanti
