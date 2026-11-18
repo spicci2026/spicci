@@ -10,6 +10,8 @@ Tutto è dentro `index.html`, nel primo `<script>`:
 - `LOC` — Comuni e aree locali coperti, con i nomi che l'utente può scrivere. `SITI` — elenco [ente, link ufficiale]: `urlFor` prende la **prima** voce il cui nome è contenuto in `e`, quindi le voci specifiche vanno **prima** di quelle generiche.
 
 ### Funzioni dell'app che dipendono da come scrivi le schede
+- **"Novità per te" in cima alla prima schermata**: l'app apre su "Per te" e mostra per prime le misure con il campo `n:"AAAA-MM-GG"` degli ultimi `NOVITA_GIORNI` (4) giorni, poi "Già in catalogo". **A ogni misura nuova di ATTIVI, o riaperta, o con importi o scadenze cambiati, metti `n` con la data di oggi.** Non mettere `n` per correzioni di testo o di link.
+- **Barra in basso**: cinque voci (Per te, Tutti, Sezioni, In arrivo, Profilo). Regioni, Imprese, Pensionati e Notizie stanno dentro "Sezioni": non aggiungere altre voci alla barra; una nuova sezione va come riquadro in `v-sezioni`.
 - **Scadenze vicine e calendario**: l'app legge la data di chiusura dal campo `s`. Scrivila sempre così: "entro il 30 novembre 2026" o "fino al 30 novembre 2026" (giorno, mese in lettere, anno). Se non c'è una data di chiusura, non inventarla.
 - **"Ti serve"**: l'elenco dei documenti è ricavato dalle parole di `todo` e `r` (ISEE, SPID o CIE, IBAN, fatture, contratto registrato, PEC, 730). Nomina in `todo` quello che serve davvero.
 - **Stima "Fino a … €"**: somma solo gli importi fissi scritti in `a` (es. "1.000 € per ogni figlio" non conta, "Fino a 1.500 €" conta). Scrivi gli importi come nella fonte, senza gonfiarli.

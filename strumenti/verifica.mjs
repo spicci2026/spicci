@@ -63,6 +63,7 @@ function controllaVoce(x, i, lista, campi) {
   if (x.z !== undefined && !territori.has(x.z)) errori.push(`${id}: territorio z="${x.z}" sconosciuto (né Regione né Comune in LOC)`);
   if (x.u !== undefined && (typeof x.u !== 'string' || !/^https:\/\/[^\s"']+\.[a-z]{2,}\//i.test(x.u) )) errori.push(`${id}: link u non valido (serve https://… alla pagina precisa del bonus): ${x.u}`);
   if (typeof x.u === 'string') { try { const U = new URL(x.u); if (U.pathname.replace(/\//g, '').length < 3 && !U.search) errori.push(`${id}: il link u porta alla home dell'ente, serve la pagina precisa: ${x.u}`); } catch (e) { errori.push(`${id}: link u non leggibile: ${x.u}`); } }
+  if (x.n !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(String(x.n))) errori.push(`${id}: campo n non valido (serve la data AAAA-MM-GG): ${x.n}`);
   if (x.k !== undefined && (typeof x.k !== 'string' || !/^[a-z0-9]+(\|[a-z0-9]+)*$/.test(x.k))) errori.push(`${id}: campo k non valido: ${x.k}`);
   const k = lista + '|' + x.t + '|' + (x.z || '');
   if (chiavi.has(k)) errori.push(`${id}: voce duplicata`); chiavi.add(k);
