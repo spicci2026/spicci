@@ -2,7 +2,7 @@
 
 L'aggiornamento automatico (lunedì, mercoledì, venerdì) controlla a ogni esecuzione il gruppo "Prossimo", poi aggiorna questa riga al gruppo successivo (dopo il 6 si torna all'1).
 
-**Prossimo: 1**
+**Prossimo: 2**
 
 1. Emilia-Romagna (Rubicone e Mare, Bologna, Rimini, Modena, Ferrara, Ravenna) e Lombardia
 2. Lazio, Campania, Veneto

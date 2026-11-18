@@ -4,9 +4,6 @@ L'aggiornamento automatico (lunedì, mercoledì, venerdì) aggiunge **fino a 3 C
 Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non trovi misure verificabili sul sito ufficiale, spostalo in "Rimandati" con il motivo e passa al successivo.
 
 ## Da fare (in ordine di priorità)
-- Catania (Sicilia)
-- Messina (Sicilia)
-- Parma (Emilia-Romagna)
 - Reggio Emilia (Emilia-Romagna)
 - Latina (Lazio)
 - Siracusa (Sicilia)
@@ -80,7 +77,8 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 - Urbino (Marche)
 
 ## Fatti
-(nessuno ancora)
+- Messina (Sicilia) — 2026-11-18
+- Parma (Emilia-Romagna) — 2026-11-18
 
 ## Rimandati
-(nessuno ancora)
+- Catania (Sicilia) — 2026-11-18: il sito ufficiale www.comune.catania.it blocca la lettura automatica (robots.txt), misure non verificabili; riprovare più avanti
