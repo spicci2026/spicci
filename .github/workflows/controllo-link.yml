@@ -1,0 +1,32 @@
+name: Controllo settimanale dei link
+# Ogni domenica notte apre tutti i link ufficiali dei bonus e scrive strumenti/link-controllati.md.
+# L'aggiornamento automatico legge quel file e corregge per primi i link rotti.
+on:
+  schedule:
+    - cron: '17 2 * * 0'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: controllo-link
+  cancel-in-progress: false
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Controlla i link
+        run: node strumenti/controlla-link.mjs
+      - name: Salva il risultato
+        run: |
+          git config user.name "spicci-controllo-link"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add strumenti/link-controllati.md
+          if git diff --cached --quiet; then echo "Nessun cambiamento"; exit 0; fi
+          git commit -m "Controllo settimanale dei link"
+          git pull --rebase origin main
+          git push

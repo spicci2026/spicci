@@ -123,5 +123,12 @@ console.log(`Link alla pagina precisa: ${S.ATTIVI.length - senzaLink} misure att
 console.log(`Catalogo: ${S.ATTIVI.length} attive, ${S.ARRIVO.length} in arrivo, ${S.NEWS.length} novità, ${Object.keys(S.LOC).length} Comuni/aree locali, ${S.SITI.length} siti ufficiali.`);
 sintesi.forEach((r) => console.log('  ' + r));
 avvisi.forEach((a) => console.log('AVVISO: ' + a));
+// Pagine dei bonus (cartella bonus/ e sitemap.xml) allineate al catalogo e alla versione di sw.js
+{
+  const { spawnSync } = await import('node:child_process');
+  const r = spawnSync(process.execPath, [new URL('./genera-pagine.mjs', import.meta.url).pathname, '--controlla'], { encoding: 'utf8' });
+  if (r.status !== 0) errori.push((r.stdout || r.stderr || 'Pagine dei bonus non aggiornate').trim());
+  else console.log(r.stdout.trim());
+}
 if (errori.length) { errori.forEach((e) => console.error('ERRORE: ' + e)); console.error(`\n${errori.length} errori: NON pubblicare.`); process.exit(1); }
 console.log('Verifica superata.');
