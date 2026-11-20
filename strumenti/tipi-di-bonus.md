@@ -4,7 +4,7 @@ L'aggiornamento automatico controlla un gruppo a ogni esecuzione (lunedì, merco
 
 Le voci sono **idee da verificare**, non misure sicure: molte cambiano nome, scadono o vengono rifinanziate ogni anno. Una voce va nel catalogo solo se la trovi su una fonte ufficiale (INPS, Agenzia delle Entrate, ministeri, Gazzetta Ufficiale, Regioni, Comuni, portali UE), con il link alla pagina precisa (`u`). Se non è attiva né annunciata, non inserirla. Se è già nel catalogo, controlla che importi, soglie e scadenze siano ancora giusti.
 
-**Prossimo: 4**
+**Prossimo: 5**
 
 ## 1. Famiglia e figli
 - Congedi parentali e di paternità (INPS): indennità per mamme e papà lavoratori.

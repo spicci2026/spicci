@@ -7,12 +7,6 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 Si aggiungono solo i Comuni attivi: almeno 3 misure diverse per i residenti negli ultimi 12 mesi sul sito ufficiale. Analisi del 18/11/2026 su 24 candidati (misure viste): Pisa 8, Mantova 5, Siena 4, Carpi 4, Lecce 4 (sito non leggibile in automatico), Pordenone 4 (quasi tutte regionali), Arezzo 3-4, Pavia 3-4, Pistoia 3, Como 3, Lucca 2-3, Cesena 2-3; sotto la soglia Imola, Pesaro, Alessandria, Cuneo, Cremona, Faenza, Busto Arsizio, Varese, Treviso, Sesto San Giovanni, Brindisi, La Spezia.
 
 ## Da fare (in ordine di priorità)
-- Carpi (Emilia-Romagna)
-- Lecce (Puglia)
-- Pavia (Lombardia)
-- Como (Lombardia)
-- Pordenone (Friuli-Venezia Giulia)
-- Lucca (Toscana)
 - Cesena (Emilia-Romagna)
 - Pesaro (Marche)
 - Alessandria (Piemonte)
@@ -80,8 +74,14 @@ Si aggiungono solo i Comuni attivi: almeno 3 misure diverse per i residenti negl
 - Forlì (Emilia-Romagna) — 2026-11-18
 - Messina (Sicilia) — 2026-11-18
 - Parma (Emilia-Romagna) — 2026-11-18
+- Carpi (Emilia-Romagna) — 2026-11-20
+- Como (Lombardia) — 2026-11-20
+- Pordenone (Friuli-Venezia Giulia) — 2026-11-20
+- Lucca (Toscana) — 2026-11-20
 
 ## Rimandati
+- Lecce (Puglia) — 2026-11-20: il sito ufficiale www.comune.lecce.it blocca la lettura automatica; nei risultati di ricerca compaiono almeno 4 misure (povertà energetica, centri estivi, morosità incolpevole, nidi): riprovare più avanti
+- Pavia (Lombardia) — 2026-11-20: poco attivo (2 misure locali: Bonus Amici Fedeli, agevolazioni TARI)
 - Varese, Treviso, Brindisi, La Spezia — 2026-11-18: poco attivi (0-1 misure per i residenti nel 2026 sul sito ufficiale)
 - Barletta (Puglia) — 2026-11-18: trovate solo le tariffe mensa 2025/26 (delibera di Giunta n. 4/2025), nessun documento ufficiale 2026/27; riprovare più avanti
 - Catania (Sicilia) — 2026-11-18: il sito ufficiale www.comune.catania.it blocca la lettura automatica (robots.txt), misure non verificabili; riprovare più avanti
