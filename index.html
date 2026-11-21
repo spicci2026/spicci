@@ -43,11 +43,6 @@
   input:focus,select:focus,button:focus-visible{outline:2px solid var(--a1);outline-offset:2px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .full{grid-column:1/-1}
-  .checks{display:grid;gap:8px;margin-top:14px}
-  .checks label{display:flex;gap:10px;align-items:center;margin:0;font-size:15px;font-weight:500;color:var(--ink);background:var(--card2);border-radius:12px;padding:11px 12px}
-  .checks input{width:20px;height:20px;accent-color:var(--a1);flex:none}
-  .chkintro{margin:16px 0 0;font-size:14px;color:var(--muted)}
-  .chkh{font-size:13px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:4px 2px 0}
   button{font:inherit;cursor:pointer;border:0}
   .cta{width:100%;margin-top:16px;padding:15px;border-radius:14px;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(90deg,var(--g1),var(--g2))}
   .link{background:none;color:var(--muted);text-decoration:underline;font-size:13px;margin-top:12px;padding:6px 0}
@@ -134,6 +129,73 @@
   .reg .go{font-size:20px;color:var(--muted)}
   .back{background:var(--card2);color:var(--ink);font-weight:700;border-radius:12px;padding:10px 14px;margin-bottom:12px}
   .subh{font-size:15px;font-weight:800;margin:18px 0 10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+  .st{background:var(--card2);color:var(--muted);border-radius:12px;padding:8px 4px;font-size:13.5px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:6px}
+  .st b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:999px;background:#fff;color:var(--muted);font-size:12.5px}
+  .st[aria-current=step]{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff}
+  .st[aria-current=step] b{color:var(--a2)}
+  .st.fatto{color:var(--ok)} .st.fatto b{background:var(--ok);color:#fff}
+  fieldset.step{border:0;padding:0;margin:0;min-width:0}
+  fieldset.step legend{font-size:21px;font-weight:800;margin:0;padding:0;color:var(--ink)}
+  .steph{color:var(--muted);font-size:14px;margin:2px 0 14px}
+  .nav2{display:flex;gap:8px;margin-top:16px}
+  .nav2 .cta{margin-top:0;flex:1}
+  .back2{background:var(--card2);color:var(--ink);font-weight:800;border-radius:14px;padding:15px 16px;font-size:16px}
+  .err{background:#ffe1e1;color:#b3261e;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600;margin:12px 0 0}
+  .hint{font-size:13px;margin-top:6px;color:var(--ok);font-weight:600}
+  .hint.no{color:var(--muted);font-weight:500}
+  .link2{display:inline-block;background:none;color:var(--soon);font-weight:700;font-size:13.5px;padding:8px 0 0;text-decoration:underline}
+  .grp{border:1px solid var(--line);border-radius:14px;margin-top:8px;background:var(--card)}
+  .grp summary{list-style:none;display:flex;align-items:center;gap:10px;padding:13px 14px;cursor:pointer}
+  .grp summary::-webkit-details-marker{display:none}
+  .grp summary::after{content:"▾";color:var(--muted);font-size:18px;transition:transform .15s}
+  .grp[open] summary::after{transform:rotate(180deg)}
+  .grp .tx{flex:1;min-width:0}
+  .grp summary b{display:block;font-size:15.5px}
+  .grp summary small{display:block;color:var(--muted);font-size:12.5px}
+  .grp .cnt{background:var(--a1);color:#fff;border-radius:999px;font-size:12px;font-weight:800;padding:2px 9px}
+  .grp .opts{padding:0 10px 12px}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .opt{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;background:var(--card2);color:var(--ink);border:2px solid transparent;border-radius:14px;padding:10px 26px 10px 11px;font-size:14px;font-weight:600;line-height:1.25;min-height:76px;margin:0;cursor:pointer}
+  .opt i{font-style:normal;font-size:22px;line-height:1}
+  .opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+  .opt.on,.opt:has(input:checked){background:#ffe7dc;border-color:var(--a1)}
+  .opt.on::after,.opt:has(input:checked)::after{content:"✓";position:absolute;top:8px;right:10px;font-weight:900;color:var(--a1)}
+  .opt:has(input:focus-visible){outline:2px solid var(--a1);outline-offset:2px}
+  .hero .sum{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;z-index:1}
+  .hero .sum span,.hero .sum button{background:rgba(255,255,255,.94);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:700}
+  .item{position:relative}
+  .item .top{cursor:pointer}
+  .pills{display:flex;flex-wrap:wrap;gap:6px;padding-right:44px;min-height:26px}
+  .pills .pill{margin:0}
+  .star{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:20px;line-height:1;color:#c98a00;display:grid;place-items:center;z-index:2;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+  .star[aria-pressed=true]{background:#fff4cc;border-color:#f5c542}
+  .acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+  .acts .bt{flex:1;min-width:120px;text-align:center;border-radius:12px;padding:11px 10px;font-weight:800;font-size:14.5px;text-decoration:none;background:var(--card2);color:var(--ink)}
+  .acts .bt.pri{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff}
+  .det{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+  .prog{font-size:12.5px;font-weight:700;color:var(--ok);margin-top:6px}
+  .todo{display:grid;gap:6px;margin-top:6px}
+  .todo label.passo{display:flex;gap:10px;align-items:flex-start;margin:0;font-size:14px;font-weight:500;color:var(--ink);background:var(--card2);border-radius:10px;padding:9px 10px;cursor:pointer}
+  .todo label.passo input{width:20px;height:20px;flex:none;accent-color:var(--ok);margin:1px 0 0}
+  .todo label.passo.ok span{text-decoration:line-through;color:var(--muted)}
+  .need{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .nd{display:inline-flex;align-items:center;gap:4px;background:var(--card2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:600}
+  .nd b{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:999px;background:var(--soon);color:#fff;font-size:11px}
+  .nd[aria-expanded=true]{border-color:var(--soon)}
+  .aiuto{background:var(--soon-soft);color:var(--ink);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:13.5px;line-height:1.45}
+  .aiuto p{margin:4px 0 4px}
+  .aiuto a{display:block;color:var(--soon);font-weight:700;margin-top:6px}
+  .fcard .btn.stl{flex:none;min-width:0;padding:12px 14px}
+  .toast{position:fixed;left:50%;bottom:98px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:999px;padding:10px 16px;font-size:14px;font-weight:600;z-index:6;box-shadow:0 4px 14px rgba(0,0,0,.25);max-width:90vw;text-align:center}
+  .mieibox{width:100%;display:flex;align-items:center;gap:12px;text-align:left;background:#fff4cc;color:var(--ink);border:1px solid #f5d36b;border-radius:16px;padding:12px 14px;margin-bottom:12px}
+  .mieibox .tx{flex:1} .mieibox b{display:block;font-size:16px} .mieibox small{display:block;font-size:13px;color:var(--muted)}
+  .mieibox i{font-style:normal;font-size:22px;color:var(--muted)}
+  .invito h3{margin:0 0 4px;font-size:17px}
+  .invito .sub{margin:0 0 12px;font-size:14px}
+  .invito .opt{flex-direction:row;align-items:center;gap:9px;min-height:58px;padding:8px 10px;font-family:inherit;font-size:13.5px}
+  .invito .opt i{font-size:20px}
+  .tile.wide{grid-column:1/-1;min-height:96px}
   [hidden]{display:none!important}
   .brand{display:flex;align-items:center;justify-content:space-between;gap:10px}
   .installbtn{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border:0;border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px;cursor:pointer}
@@ -153,74 +215,99 @@
     <p class="sub">30 secondi, zero registrazione. Bonus, fondi e agevolazioni fatti per te.</p>
     <div class="lock">🔒 I tuoi dati restano su questo telefono. Non vengono inviati a nessun server.</div>
     <form id="form" class="card" novalidate>
-      <div class="grid">
-        <div><label for="eta">Età</label><input id="eta" type="number" inputmode="numeric" min="16" max="110" value="27"></div>
-        <div><label for="genere">Genere</label><select id="genere"><option value="">Non lo dico</option><option value="f">Donna</option><option value="m">Uomo</option></select></div>
-        <div><label for="regione">Regione</label><select id="regione"></select></div>
-        <div id="provBox"><label for="provincia">Provincia</label><select id="provincia"><option value="">Non lo dico</option><option value="Trento">Trento</option><option value="Bolzano">Bolzano</option></select></div>
-        <div><label for="lavoro">Lavoro</label><select id="lavoro">
-          <option value="dipendente">Dipendente</option><option value="autonomo">Autonomo / P. IVA</option>
-          <option value="disoccupato">Disoccupato / inattivo</option><option value="studente">Studente</option><option value="pensionato">Pensionato</option></select></div>
-        <div><label for="nucleo">Persone in famiglia</label><input id="nucleo" type="number" inputmode="numeric" min="1" max="15" value="1"></div>
-        <div><label for="figli">Figli a carico</label><input id="figli" type="number" inputmode="numeric" min="0" max="12" value="0"></div>
-        <div class="full"><label for="comune">Il tuo Comune</label><input id="comune" type="search" placeholder="es. Milano, Roma, Savignano sul Rubicone" autocomplete="off"></div>
-        <div class="full"><label for="isee">ISEE in euro (vuoto se non lo sai)</label><input id="isee" type="number" inputmode="decimal" min="0" step="500" placeholder="es. 18000"></div>
+      <div class="steps">
+        <button type="button" class="st" data-step="1" aria-current="step"><b>1</b>Tu</button>
+        <button type="button" class="st" data-step="2"><b>2</b>Famiglia</button>
+        <button type="button" class="st" data-step="3"><b>3</b>Situazioni</button>
       </div>
-      <p class="chkintro">Spunta quello che ti riguarda: l'app capisce da sola cosa ti spetta.</p>
-      <div class="checks"><div class="chkh">🏠 Casa</div>
-        <label><input type="checkbox" id="affitto"> Vivo in affitto</label>
-        <label><input type="checkbox" id="sfratto"> Faccio fatica a pagare l'affitto</label>
-        <label><input type="checkbox" id="compra"> Vorrei comprare la mia prima casa</label>
-        <label><input type="checkbox" id="mutuo"> Ho già un mutuo sulla casa</label>
-        <label><input type="checkbox" id="lavori"> Ristrutturo o ristrutturerò casa</label>
-        <label><input type="checkbox" id="caldaia"> Vorrei cambiare caldaia o mettere i pannelli solari</label>
+      <fieldset class="step" id="passo1">
+        <legend>Parliamo di te</legend>
+        <p class="steph">Servono a capire quali bonus valgono dove vivi.</p>
+        <div class="grid">
+          <div><label for="eta">Età</label><input id="eta" type="number" inputmode="numeric" min="16" max="110" placeholder="es. 34"></div>
+          <div><label for="genere">Genere</label><select id="genere"><option value="">Non lo dico</option><option value="f">Donna</option><option value="m">Uomo</option></select></div>
+          <div><label for="regione">Regione</label><select id="regione"><option value="">Scegli…</option></select></div>
+          <div><label for="lavoro">Cosa fai</label><select id="lavoro"><option value="">Scegli…</option>
+            <option value="dipendente">Dipendente</option><option value="autonomo">Autonomo / P. IVA</option>
+            <option value="disoccupato">Disoccupato / inattivo</option><option value="studente">Studente</option><option value="pensionato">Pensionato</option></select></div>
+          <div id="provBox"><label for="provincia">Provincia</label><select id="provincia"><option value="">Non lo dico</option><option value="Trento">Trento</option><option value="Bolzano">Bolzano</option></select></div>
+          <div class="full"><label for="comune">Il tuo Comune</label><input id="comune" type="search" placeholder="es. Milano, Roma, Savignano sul Rubicone" autocomplete="off"><div class="hint" id="comuneHint" hidden></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="step" id="passo2" hidden>
+        <legend>La tua famiglia</legend>
+        <p class="steph">Molti bonus dipendono da quante persone siete e dall'ISEE.</p>
+        <div class="grid">
+          <div><label for="nucleo">Persone in famiglia</label><input id="nucleo" type="number" inputmode="numeric" min="1" max="15" value="1"></div>
+          <div><label for="figli">Figli a carico</label><input id="figli" type="number" inputmode="numeric" min="0" max="12" value="0"></div>
+          <div class="full"><label for="isee">ISEE in euro (lascia vuoto se non lo sai)</label><input id="isee" type="number" inputmode="decimal" min="0" step="500" placeholder="es. 18000">
+            <button type="button" class="link2" id="iseeQ" aria-expanded="false">❓ Cos'è l'ISEE e come si fa?</button><div id="iseeAiuto" hidden></div></div>
+        </div>
+      </fieldset>
+      <fieldset class="step" id="passo3" hidden>
+        <legend>Cosa ti riguarda?</legend>
+        <p class="steph">Apri un gruppo e tocca le situazioni che vivi: più ne scegli, più bonus trovi. Puoi cambiarle quando vuoi.</p>
+        <details class="grp"><summary><span class="tx"><b>🏠 Casa</b><small>Affitto, prima casa, mutuo, lavori</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="affitto"><i>🔑</i><span>Vivo in affitto</span></label>
+          <label class="opt"><input type="checkbox" id="sfratto"><i>😟</i><span>Faccio fatica a pagare l'affitto</span></label>
+          <label class="opt"><input type="checkbox" id="compra"><i>🏡</i><span>Vorrei comprare la mia prima casa</span></label>
+          <label class="opt"><input type="checkbox" id="mutuo"><i>🏦</i><span>Ho già un mutuo sulla casa</span></label>
+          <label class="opt"><input type="checkbox" id="lavori"><i>🔨</i><span>Ristrutturo o ristrutturerò casa</span></label>
+          <label class="opt"><input type="checkbox" id="caldaia"><i>🔥</i><span>Vorrei cambiare caldaia o mettere i pannelli solari</span></label>
+        </div></details>
+        <details class="grp"><summary><span class="tx"><b>👨‍👩‍👧 Famiglia</b><small>Gravidanza, figli, scuola, sport</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="attesa"><i>🤰</i><span>Aspetto un bambino</span></label>
+          <label class="opt"><input type="checkbox" id="nato"><i>👶</i><span>Ho avuto o adottato un figlio dal 2025</span></label>
+          <label class="opt"><input type="checkbox" id="under3"><i>🍼</i><span>Ho un figlio sotto i 3 anni</span></label>
+          <label class="opt"><input type="checkbox" id="scuola"><i>🎒</i><span>Ho figli che vanno a scuola</span></label>
+          <label class="opt"><input type="checkbox" id="sport"><i>⚽</i><span>I miei figli fanno sport o vanno ai centri estivi</span></label>
+          <label class="opt"><input type="checkbox" id="solo"><i>👩‍👧</i><span>Sono un genitore solo</span></label>
+          <label class="opt"><input type="checkbox" id="casalinga"><i>🧺</i><span>Non lavoro: mi occupo della casa e della famiglia</span></label>
+        </div></details>
+        <details class="grp"><summary><span class="tx"><b>💼 Lavoro e studio</b><small>Aprire un'attività, assumere, corsi, università</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="impresa"><i>💡</i><span>Vorrei aprire un'attività</span></label>
+          <label class="opt"><input type="checkbox" id="assumo"><i>🤝</i><span>Vorrei assumere qualcuno</span></label>
+          <label class="opt"><input type="checkbox" id="agri"><i>🌾</i><span>Vorrei lavorare in agricoltura</span></label>
+          <label class="opt"><input type="checkbox" id="corso"><i>📚</i><span>Vorrei fare un corso per trovare lavoro</span></label>
+          <label class="opt"><input type="checkbox" id="uni"><i>🎓</i><span>Io o un mio figlio studiamo all'università</span></label>
+          <label class="opt"><input type="checkbox" id="estero"><i>✈️</i><span>Vorrei fare un'esperienza all'estero</span></label>
+          <label class="opt"><input type="checkbox" id="docente"><i>🍎</i><span>Sono un insegnante</span></label>
+        </div></details>
+        <details class="grp"><summary><span class="tx"><b>❤️ Salute e assistenza</b><small>Familiari da assistere, disabilità, psicologo</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="cura"><i>🧓</i><span>Assisto un familiare anziano o non autosufficiente</span></label>
+          <label class="opt"><input type="checkbox" id="disab"><i>♿</i><span>In famiglia c'è una persona con disabilità</span></label>
+          <label class="opt"><input type="checkbox" id="psico"><i>🧠</i><span>Vorrei andare dallo psicologo</span></label>
+          <label class="opt"><input type="checkbox" id="malattia"><i>💊</i><span>Ho una malattia cronica o rara</span></label>
+        </div></details>
+        <details class="grp"><summary><span class="tx"><b>🆘 Situazioni difficili</b><small>Debiti, avvocato, violenza</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="debiti"><i>💸</i><span>Ho debiti che faccio fatica a pagare</span></label>
+          <label class="opt"><input type="checkbox" id="legale"><i>⚖️</i><span>Mi serve un avvocato ma ho un reddito basso</span></label>
+          <label class="opt"><input type="checkbox" id="violenza"><i>💜</i><span>Sto uscendo da una situazione di violenza</span></label>
+        </div></details>
+        <details class="grp"><summary><span class="tx"><b>🚌 Spostamenti</b><small>Mezzi pubblici, auto, elettrico</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="mezzi"><i>🚌</i><span>Uso bus, treni o metro</span></label>
+          <label class="opt"><input type="checkbox" id="auto"><i>🚗</i><span>Devo cambiare la mia auto</span></label>
+          <label class="opt"><input type="checkbox" id="elettrico"><i>⚡</i><span>Penso a moto, scooter o auto elettrica</span></label>
+        </div></details>
+        <details class="grp"><summary><span class="tx"><b>🐾 Altro</b><small>Animali, trasferirsi, tornare in Italia</small></span><span class="cnt" hidden></span></summary><div class="opts">
+          <label class="opt"><input type="checkbox" id="animale"><i>🐶</i><span>Ho un animale domestico</span></label>
+          <label class="opt"><input type="checkbox" id="trasf"><i>🏘️</i><span>Vorrei trasferirmi in un piccolo Comune o al Sud</span></label>
+          <label class="opt"><input type="checkbox" id="rientro"><i>🧳</i><span>Vivo all'estero e vorrei tornare in Italia</span></label>
+        </div></details>
+      </fieldset>
+      <p class="err" id="formErr" role="alert" hidden></p>
+      <div class="nav2">
+        <button type="button" class="back2" id="prev" hidden>‹ Indietro</button>
+        <button type="button" class="cta" id="next">Avanti</button>
+        <button type="submit" class="cta" id="go" hidden>Mostrami cosa mi spetta</button>
       </div>
-      <div class="checks"><div class="chkh">👨‍👩‍👧 Famiglia</div>
-        <label><input type="checkbox" id="attesa"> Aspetto un bambino</label>
-        <label><input type="checkbox" id="nato"> Ho avuto o adottato un figlio dal 2025</label>
-        <label><input type="checkbox" id="under3"> Ho un figlio sotto i 3 anni</label>
-        <label><input type="checkbox" id="scuola"> Ho figli che vanno a scuola</label>
-        <label><input type="checkbox" id="sport"> I miei figli fanno sport o vanno ai centri estivi</label>
-        <label><input type="checkbox" id="solo"> Sono un genitore solo</label>
-        <label><input type="checkbox" id="casalinga"> Non lavoro: mi occupo della casa e della famiglia</label>
-      </div>
-      <div class="checks"><div class="chkh">💼 Lavoro e studio</div>
-        <label><input type="checkbox" id="impresa"> Vorrei aprire un'attività</label>
-        <label><input type="checkbox" id="assumo"> Vorrei assumere qualcuno</label>
-        <label><input type="checkbox" id="agri"> Vorrei lavorare in agricoltura</label>
-        <label><input type="checkbox" id="corso"> Vorrei fare un corso per trovare lavoro</label>
-        <label><input type="checkbox" id="uni"> Io o un mio figlio studiamo all'università</label>
-        <label><input type="checkbox" id="estero"> Vorrei fare un'esperienza all'estero</label>
-        <label><input type="checkbox" id="docente"> Sono un insegnante</label>
-      </div>
-      <div class="checks"><div class="chkh">❤️ Salute e assistenza</div>
-        <label><input type="checkbox" id="cura"> Assisto un familiare anziano o non autosufficiente</label>
-        <label><input type="checkbox" id="disab"> In famiglia c'è una persona con disabilità</label>
-        <label><input type="checkbox" id="psico"> Vorrei andare dallo psicologo</label>
-        <label><input type="checkbox" id="malattia"> Ho una malattia cronica o rara</label>
-      </div>
-      <div class="checks"><div class="chkh">🆘 Situazioni difficili</div>
-        <label><input type="checkbox" id="debiti"> Ho debiti che faccio fatica a pagare</label>
-        <label><input type="checkbox" id="legale"> Mi serve un avvocato ma ho un reddito basso</label>
-        <label><input type="checkbox" id="violenza"> Sto uscendo da una situazione di violenza</label>
-      </div>
-      <div class="checks"><div class="chkh">🚌 Spostamenti</div>
-        <label><input type="checkbox" id="mezzi"> Uso bus, treni o metro</label>
-        <label><input type="checkbox" id="auto"> Devo cambiare la mia auto</label>
-        <label><input type="checkbox" id="elettrico"> Penso a moto, scooter o auto elettrica</label>
-      </div>
-      <div class="checks"><div class="chkh">🐾 Altro</div>
-        <label><input type="checkbox" id="animale"> Ho un animale domestico</label>
-        <label><input type="checkbox" id="trasf"> Vorrei trasferirmi in un piccolo Comune o al Sud</label>
-        <label><input type="checkbox" id="rientro"> Vivo all'estero e vorrei tornare in Italia</label>
-      </div>
-      <button type="submit" class="cta">Mostrami cosa mi spetta</button>
+      <button type="submit" class="link" id="salva" hidden>Salva e mostrami i bonus</button>
       <button type="button" class="link" id="clear">Cancella i miei dati da questo telefono</button>
     </form>
   </section>
 
   <section id="v-perte" hidden>
-    <div class="card hero"><div class="n" id="heroN">0</div><div class="l" id="heroL"></div></div>
+    <div class="card hero"><div class="n" id="heroN">0</div><div class="l" id="heroL"></div><div class="sum" id="heroS"></div></div>
     <div id="listPerte"></div>
   </section>
 
@@ -236,6 +323,7 @@
     <h2>Sezioni</h2>
     <p class="sub">Scegli cosa ti interessa.</p>
     <div class="tiles">
+      <button type="button" class="tile wide" data-go="miei" style="background:linear-gradient(135deg,#f5b400,#f4511e)"><i>⭐</i>I miei bonus<span>Quelli salvati con la stellina e i passi già fatti</span></button>
       <button type="button" class="tile" data-go="regioni" style="background:linear-gradient(135deg,#49aee8,#1f78a6)"><i>🗺️</i>Regioni e Comuni<span>I bonus del tuo territorio</span></button>
       <button type="button" class="tile" data-go="imprese" style="background:linear-gradient(135deg,#1f6fd1,#19b6a3)"><i>💼</i>Imprese e partite IVA<span>Aprire, crescere, assumere</span></button>
       <button type="button" class="tile" data-go="pensione" style="background:linear-gradient(135deg,#ff9a3d,#e0457b)"><i>🧓</i>Pensionati e over 65<span>Pensione, salute, sconti</span></button>
@@ -274,6 +362,13 @@
     <div id="listPensione"></div>
   </section>
 
+  <section id="v-miei" hidden>
+    <button type="button" class="back" data-go="sezioni">‹ Sezioni</button>
+    <h2>⭐ I miei bonus</h2>
+    <p class="sub">I bonus che hai salvato con la stellina, con i passi che hai già fatto. Restano solo su questo telefono.</p>
+    <div id="listMiei"></div>
+  </section>
+
   <section id="v-news" hidden>
     <button type="button" class="back" data-go="sezioni">‹ Sezioni</button>
     <h2>Novità utili</h2>
@@ -291,13 +386,14 @@
   <button role="tab" data-v="arrivo"><i>⏳</i>In arrivo</button>
   <button role="tab" data-v="profilo" aria-selected="true"><i>👤</i>Profilo</button>
 </div></nav>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
 <script>
 (function(){
   var $ = function(id){ return document.getElementById(id); };
   var REGIONI = ["Abruzzo","Basilicata","Calabria","Campania","Emilia-Romagna","Friuli-Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino-Alto Adige","Umbria","Valle d'Aosta","Veneto"];
   var SUD = {"Abruzzo":1,"Basilicata":1,"Calabria":1,"Campania":1,"Molise":1,"Puglia":1,"Sardegna":1,"Sicilia":1};
-  REGIONI.forEach(function(r){ var o=document.createElement('option'); o.value=r; o.textContent=r; if(r==="Emilia-Romagna") o.selected=true; $('regione').appendChild(o); });
+  REGIONI.forEach(function(r){ var o=document.createElement('option'); o.value=r; o.textContent=r; $('regione').appendChild(o); });
 
   var KEY='contochiaro-profilo-v3';
   var FIELDS=['eta','genere','regione','provincia','lavoro','nucleo','figli','isee','comune'];
@@ -321,7 +417,7 @@
     if(p.lavoro==='studente'&&p.eta<20) p.scuola=true;
     if(p.lavoro==='studente'&&p.eta>=18) p.uni=true;
     p.comune=String($('comune').value||'').toLowerCase().trim(); p.er=p.regione==='Emilia-Romagna';
-    p.loc=trovaLoc(p.comune); p.rub=p.loc==='Rubicone e Mare'; p.prov=$('provincia').value;
+    p.loc=trovaLoc(p.comune); if(p.loc&&LOC[p.loc].reg!==p.regione) p.loc=null; p.rub=p.loc==='Rubicone e Mare'; p.prov=$('provincia').value;
     return p;
   }
   function save(){ try{ var raw={}; FIELDS.forEach(function(f){raw[f]=$(f).value;}); CHECKS.forEach(function(c){raw[c]=$(c).checked;}); localStorage.setItem(KEY,JSON.stringify(raw)); }catch(e){} }
@@ -1092,15 +1188,16 @@
   function pillScad(c,x){ var d=fineDi(x); if(!d) return; var g=giorniA(d); if(g<0||g>45) return;
     var b=el('button','cal','📅 '+(g===0?'Scade oggi':g===1?'Scade domani':'Scade tra '+g+' giorni')+' · aggiungi al calendario'); b.type='button'; b.addEventListener('click',function(){ calendario(x,d); }); c.appendChild(b); }
   // COSA TI SERVE — elenco ricavato dalle parole della scheda
-  function serve(x){ var t=(x.todo||'')+' '+(x.r||'')+' '+(x.a||''), L=[];
+  function serveL(x){ var t=(x.todo||'')+' '+(x.r||'')+' '+(x.a||''), L=[];
     if(/ISEE/.test(t)) L.push('ISEE valido'); if(/SPID|CIE|online|sito INPS|all\'INPS|su Invitalia/i.test(t)) L.push('SPID o CIE');
     if(/contratto registrato|contratto a canone|affitto/i.test(t)&&x.c==='Casa') L.push('contratto di affitto registrato');
     if(/IBAN|rimbors/i.test(t)) L.push('IBAN'); if(/fattur|ricevut|scontrin|bonifico/i.test(t)) L.push('fatture o ricevute');
     if(/730/.test(t)) L.push('dichiarazione dei redditi (730)'); if(/piano d\'impresa|business plan|progetto/i.test(t)) L.push('piano d\'impresa');
     if(/PEC/.test(t)) L.push('PEC'); if(/DURP/.test(t)) L.push('DURP'); if(/certificato|medico/i.test(t)) L.push('certificato medico');
-    return L.join(', '); }
+    return L; }
+  function serve(x){ return serveL(x).join(', '); }
   // STIMA — somma solo gli importi "una tantum" scritti in chiaro; è un massimo teorico, non una promessa
-  function importo(o){ var x=o.x, a=String((o.r&&o.r.amount)||x.a||''); if(x.c==='Impresa'||/prestit|mutuo|garanzia|finanziament|al mese|a settimana|a pasto|%|per figlio|per ogni/i.test(a)) return 0;
+  function importo(o){ var x=o.x, a=String((o.r&&o.r.amount)||x.a||''); if(x.c==='Impresa'||/detrazion|credito d.imposta/i.test(x.t)||/prestit|mutuo|garanzia|finanziament|al mese|a settimana|a pasto|%|per figlio|per ogni|l'anno|all'anno/i.test(a)) return 0;
     var m=/([\d.]+(?:,\d+)?) ?€/.exec(a); if(!m) return 0; var n=parseFloat(m[1].replace(/\./g,'').replace(',','.')); return (n>0&&n<=20000)?n:0; }
   function condividi(n){ var testo='Con Spicci ho scoperto '+n+' bonus che potrebbero riguardarmi. È gratis e senza registrazione:', url='https://spicci2026.github.io/spicci/';
     try{ if(navigator.share){ navigator.share({title:'Spicci',text:testo,url:url}); return; } if(navigator.clipboard){ navigator.clipboard.writeText(testo+' '+url); alert('Testo copiato: incollalo dove vuoi.'); } }catch(e){} }
@@ -1130,15 +1227,27 @@
   }
   function cardAttivo(x,res,full){
     var c=el('div','card item'); striscia(c,x);
-    if(res) c.appendChild(el('span','pill '+(res.s==='ok'||res.s==='tutti'?'b-ok':'b-check'), res.s==='ok'?'Potresti averne diritto':res.s==='tutti'?'Per tutti':'Da verificare'));
-    var h=head(x); if(res) h.style.marginTop='10px'; c.appendChild(h);
+    var st=bottoneStella(x,false); c.appendChild(st);
+    var pl=el('div','pills');
+    if(res) pl.appendChild(el('span','pill '+(res.s==='ok'||res.s==='tutti'?'b-ok':'b-check'), res.s==='ok'?'Potresti averne diritto':res.s==='tutti'?'Per tutti':'Da verificare'));
+    else pl.appendChild(el('span','pill b-soon','Salvato'));
+    c.appendChild(pl);
+    var h=head(x); h.style.marginTop='10px'; c.appendChild(h);
     c.appendChild(el('div','amount',(res&&res.amount)||x.a));
-    if(res) c.appendChild(row('Perché tu:',res.why));
-    if(full||!res) c.appendChild(row('Per chi:',x.r));
-    c.appendChild(row('Cosa fare:',x.todo));
-    var sv=serve(x); if(sv) c.appendChild(row('Ti serve:',sv));
     c.appendChild(el('div','meta',x.e+' · '+x.s)); pillScad(c,x);
-    var u=linkDi(x); if(u){ var a=el('a','golink','Vai alla pagina ufficiale del bonus →'); a.href=u; a.target='_blank'; a.rel='noopener'; c.appendChild(a); }
+    var pg=el('div','prog'); c.appendChild(pg);
+    function prog(){ var P=passi(x.todo).length, F=fatti(x).length; if(F&&P){ pg.textContent='✔ '+Math.min(F,P)+' di '+P+(P===1?' passaggio fatto':' passaggi fatti'); pg.hidden=false; } else { pg.textContent=''; pg.hidden=true; } }
+    var det=el('div','det'); det.hidden=true;
+    if(res&&res.why) det.appendChild(row('Perché tu:',res.why));
+    det.appendChild(row('Per chi:',x.r));
+    cosaFare(x,det,function(){ st.upd(); prog(); });
+    var sv=rigaServe(x); if(sv) det.appendChild(sv);
+    c.appendChild(det);
+    var acts=el('div','acts'), tb=el('button','bt','Dettagli ▾'); tb.type='button'; tb.setAttribute('aria-expanded','false');
+    function apri(){ det.hidden=!det.hidden; tb.setAttribute('aria-expanded',String(!det.hidden)); tb.textContent=det.hidden?'Dettagli ▾':'Chiudi ▴'; }
+    tb.addEventListener('click',apri); h.addEventListener('click',apri); acts.appendChild(tb);
+    var u=linkDi(x); if(u){ var a=el('a','bt pri','Vai al bonus →'); a.href=u; a.target='_blank'; a.rel='noopener'; acts.appendChild(a); }
+    c.appendChild(acts); prog();
     return c;
   }
 
@@ -1162,7 +1271,7 @@
     c.appendChild(el('div','who',x.r));
     var more=el('div','more'); more.hidden=true;
     if(res) more.appendChild(row('Perché tu:',res.why));
-    more.appendChild(row('Come si fa:',x.todo)); var sv=serve(x); if(sv) more.appendChild(row('Ti serve:',sv));
+    more.appendChild(row('Come si fa:',x.todo)); var sv=rigaServe(x); if(sv) more.appendChild(sv);
     more.appendChild(row('Chi lo gestisce:',x.e));
     more.appendChild(row('Quando:',x.s)); pillScad(more,x);
     c.appendChild(more);
@@ -1171,54 +1280,81 @@
     b.addEventListener('click',function(){ more.hidden=!more.hidden; b.setAttribute('aria-expanded', String(!more.hidden)); b.textContent=more.hidden?'Come averlo':'Chiudi'; });
     btns.appendChild(b);
     var u=linkDi(x); if(u){ var a=el('a','btn','Vai al bonus →'); a.href=u; a.target='_blank'; a.rel='noopener'; btns.appendChild(a); }
+    btns.appendChild(bottoneStella(x,true));
     c.appendChild(btns);
     return c;
   }
 
+  var filtroPerte='Tutte';
   function renderPerte(){
-    var L=$('listPerte'); L.textContent='';
+    var L=$('listPerte'); L.textContent=''; mieiBoxEl=null;
     var H=$('heroN').parentNode; if(H&&H.querySelector&&H.insertBefore){ var old=H.querySelector('.scene'); if(old&&old.parentNode===H) H.removeChild(old);
       if(profilo&&SC.col(profilo.regione)) H.insertBefore(scena(profilo.regione),H.firstChild); }
+    var HS=$('heroS'); HS.textContent='';
     if(!profilo){ $('heroN').textContent='?'; $('heroL').textContent='Compila il profilo per vedere i bonus fatti per te.'; return; }
     var hits=[]; ATTIVI.forEach(function(x){ var r=match(x); if(r) hits.push({x:x,r:r}); });
     hits.sort(function(a,b){ return (a.r.s==='ok'?0:1)-(b.r.s==='ok'?0:1); });
+    ultimiHits=hits.length;
+    var gia=hits.map(function(o){ return o.x; });
+    var tuttiAll=ATTIVI.filter(function(x){ return x.tutti && gia.indexOf(x)<0 && !altrove(x); });
+    var nOk=hits.filter(function(o){ return o.r.s==='ok'; }).length, nChk=hits.length-nOk;
     $('heroN').textContent=hits.length;
-    $('heroL').textContent = hits.length ? (hits.length===1?'misura potrebbe riguardarti':'misure potrebbero riguardarti')+' su '+ATTIVI.length+' in catalogo' : 'Nessuna misura trovata con questi dati';
-    if(hits.length){ var tot=0,nt=0; hits.forEach(function(o){ var v=importo(o); if(v){ tot+=v; nt++; } });
-      var T=el('div','tot'); if(tot){ T.appendChild(el('div','v','Fino a '+eur(tot))); T.appendChild(el('div','s','Somma dei '+nt+' bonus con un importo fisso che potrebbero riguardarti. È un massimo indicativo, non una promessa: assegni mensili, detrazioni e prestiti non sono contati.')); }
+    $('heroL').textContent = hits.length ? (hits.length===1?'bonus potrebbe riguardarti':'bonus potrebbero riguardarti')+' su '+ATTIVI.length+' in catalogo' : 'Per ora nessun bonus legato al tuo profilo';
+    if(nOk) HS.appendChild(el('span',null,'✅ '+nOk+(nOk===1?' probabile':' probabili')));
+    if(nChk) HS.appendChild(el('span',null,'🔎 '+nChk+' da verificare'));
+    if(tuttiAll.length){ var hb=el('button',null,'🌍 '+tuttiAll.length+' validi per tutti ›'); hb.type='button';
+      hb.addEventListener('click',function(){ var t=document.getElementById('secTutti'); if(t&&t.scrollIntoView) t.scrollIntoView({behavior:'smooth',block:'start'}); }); HS.appendChild(hb); }
+    // filtri per categoria
+    var cats=['Tutte']; gia.concat(tuttiAll).forEach(function(x){ if(cats.indexOf(x.c)<0) cats.push(x.c); });
+    if(cats.indexOf(filtroPerte)<0) filtroPerte='Tutte';
+    if(cats.length>2){ var C=el('div','chips'); cats.forEach(function(k){ var b=el('button','chip',(ICO[k]?ICO[k]+' ':'')+k); b.type='button'; b.setAttribute('aria-pressed',String(k===filtroPerte));
+      b.addEventListener('click',function(){ filtroPerte=k; renderPerte(); }); C.appendChild(b); }); L.appendChild(C); }
+    var filtrato=filtroPerte!=='Tutte', vedi=function(x){ return !filtrato||x.c===filtroPerte; };
+    // I miei bonus e invito a completare
+    var MB=el('div'); L.appendChild(MB); mieiBoxEl=MB; fillMieiBox();
+    if(!filtrato&&spuntate()<3){ var inv=invito(); if(inv) L.appendChild(inv); }
+    var hv=hits.filter(function(o){ return vedi(o.x); });
+    var nuove=hv.filter(function(o){ return nuova(o.x); }), vecchie=hv.filter(function(o){ return !nuova(o.x); });
+    function H2(t,m){ var h=el('h2',null,t); h.style.margin=m||'18px 0 10px'; L.appendChild(h); return h; }
+    if(nuove.length||!filtrato){
+      var NH=el('div','newh'); NH.appendChild(el('h2',null,'🆕 Novità per te')); if(nuove.length) NH.appendChild(el('span','dot',String(nuove.length))); L.appendChild(NH);
+      var NB=el('div'); L.appendChild(NB);
+      if(nuove.length){ nuove.forEach(function(o,i){ var c=cardAttivo(o.x,o.r,false), pl=c.querySelector?c.querySelector('.pills'):null; if(pl) ins(pl,el('span','pill pillnew','Nuovo'),pl.firstChild); if(i>=4) c.hidden=true; NB.appendChild(c); });
+        if(nuove.length>4){ var mb=el('button','back','Vedi tutte le '+nuove.length+' novità'); mb.type='button'; mb.addEventListener('click',function(){ for(var q=0;q<NB.children.length;q++) NB.children[q].hidden=false; mb.hidden=true; }); NB.appendChild(mb); } }
+      else NB.appendChild(el('div','card empty','Nessun nuovo bonus per te negli ultimi giorni. Il catalogo si aggiorna lunedì, mercoledì e venerdì.'));
+    }
+    if(hits.length&&!filtrato){ var tot=0,nt=0; hits.forEach(function(o){ var v=importo(o); if(v){ tot+=v; nt++; } });
+      var T=el('div','tot'); if(tot){ T.appendChild(el('div','v','Fino a '+eur(tot))); T.appendChild(el('div','s',(nt===1?'Il bonus con un importo fisso che potrebbe riguardarti.':'Somma dei '+nt+' bonus con un importo fisso che potrebbero riguardarti.')+' È un massimo indicativo, non una promessa: assegni mensili, detrazioni e prestiti non sono contati.')); }
       var sb=el('button','share','📣 Dillo a un amico'); sb.type='button'; sb.addEventListener('click',function(){ condividi(hits.length); }); T.appendChild(sb); L.appendChild(T);
       var sc=[]; hits.forEach(function(o){ var d=fineDi(o.x); if(d){ var g=giorniA(d); if(g>=0&&g<=45) sc.push({x:o.x,d:d,g:g}); } }); sc.sort(function(a,b){ return a.g-b.g; });
       if(sc.length){ var S2=el('div','tot'); S2.appendChild(el('h2',null,'⏰ Scadenze vicine')); sc.forEach(function(o){ var r=el('div','scad'); r.appendChild(el('span','g'+(o.g<=7?' urg':''),o.g===0?'Oggi':o.g===1?'Domani':o.g+' giorni')); r.appendChild(el('span','t',o.x.t));
           var cb=el('button','cal','📅'); cb.type='button'; cb.setAttribute('aria-label','Aggiungi al calendario'); cb.addEventListener('click',function(){ calendario(o.x,o.d); }); r.appendChild(cb); S2.appendChild(r); }); L.appendChild(S2); } }
-    var nuove=hits.filter(function(o){ return nuova(o.x); }), vecchie=hits.filter(function(o){ return !nuova(o.x); });
-    var NH=el('div','newh'); NH.appendChild(el('h2',null,'🆕 Novità per te')); if(nuove.length) NH.appendChild(el('span','dot',String(nuove.length))); ins(L,NH,L.firstChild);
-    var NB=el('div'); ins(L,NB,NH.nextSibling);
-    if(nuove.length){ nuove.forEach(function(o,i){ var c=cardAttivo(o.x,o.r,false); ins(c,el('span','pill pillnew','Nuovo'),c.querySelector?c.querySelector('.pill'):null); if(i>=4) c.hidden=true; NB.appendChild(c); });
-      if(nuove.length>4){ var mb=el('button','back','Vedi tutte le '+nuove.length+' novità'); mb.type='button'; mb.addEventListener('click',function(){ for(var q=0;q<NB.children.length;q++) NB.children[q].hidden=false; mb.hidden=true; }); NB.appendChild(mb); } }
-    else NB.appendChild(el('div','card empty','Nessun nuovo bonus per te negli ultimi giorni. Il catalogo si aggiorna lunedì, mercoledì e venerdì.'));
-    var gh=el('h2',null,'📚 Già in catalogo per te ('+vecchie.length+')'); gh.style.margin='22px 0 10px'; L.appendChild(gh);
     var loc=vecchie.filter(function(o){ return !!o.x.z&&!altrove(o.x); }), naz=vecchie.filter(function(o){ return !o.x.z||altrove(o.x); });
-    var nome=String($('comune').value||'').trim();
-    if(true){
-      var h=el('h2',null,'📍 Vicino a te'); h.style.margin='18px 0 10px'; L.appendChild(h);
-      if(loc.length){ loc.forEach(function(o){ L.appendChild(cardAttivo(o.x,o.r,false)); }); }
-      else if(!COPERTE[profilo.regione]){ L.appendChild(el('div','card empty','I bonus regionali di '+profilo.regione+' non sono ancora in catalogo: stanno arrivando. Intanto controlla il sito della tua Regione.')); }
-      else { L.appendChild(el('div','card empty','Con questi dati non risultano bonus regionali attivi per te in '+profilo.regione+'.')); }
-      if(nome&&!profilo.loc){ L.appendChild(el('div','lock','🏛️ I bonus del Comune di '+nome+' non sono ancora in catalogo. Per ora cerca "contributi" o "bandi" sul sito del tuo Comune.')); }
-      var futuri=ARRIVO.filter(function(x){ return x.z&&x.m&&x.m(profilo); }).length;
-      if(futuri){ var f=el('div','lock','⏳ '+futuri+(futuri===1?' misura locale in arrivo':' misure locali in arrivo')+': le trovi nella scheda "In arrivo".'); L.appendChild(f); }
+    if(vecchie.length||!filtrato){
+      H2('📚 Già in catalogo per te ('+vecchie.length+')','22px 0 10px');
+      if(loc.length||!filtrato){
+        H2('📍 Vicino a te');
+        var nome=String($('comune').value||'').trim();
+        if(loc.length){ loc.forEach(function(o){ L.appendChild(cardAttivo(o.x,o.r,false)); }); }
+        else if(!COPERTE[profilo.regione]){ L.appendChild(el('div','card empty','I bonus regionali di '+profilo.regione+' non sono ancora in catalogo: stanno arrivando. Intanto controlla il sito della tua Regione.')); }
+        else { L.appendChild(el('div','card empty','Con questi dati non risultano bonus regionali attivi per te in '+profilo.regione+'.')); }
+        if(!filtrato){
+          if(nome&&!profilo.loc){ L.appendChild(el('div','lock','🏛️ I bonus del Comune di '+nome+' non sono ancora in catalogo. Per ora cerca "contributi" o "bandi" sul sito del tuo Comune.')); }
+          var futuri=ARRIVO.filter(function(x){ return x.z&&x.m&&x.m(profilo); }).length;
+          if(futuri){ L.appendChild(el('div','lock','⏳ '+futuri+(futuri===1?' misura locale in arrivo':' misure locali in arrivo')+': le trovi nella scheda "In arrivo".')); }
+        }
+      }
+      if(naz.length){ H2('🇮🇹 In tutta Italia'); naz.forEach(function(o){ L.appendChild(cardAttivo(o.x,o.r,false)); }); }
     }
-    if(naz.length){ var h2=el('h2',null,'🇮🇹 In tutta Italia'); h2.style.margin='18px 0 10px'; L.appendChild(h2); naz.forEach(function(o){ L.appendChild(cardAttivo(o.x,o.r,false)); }); }
-    var gia=hits.map(function(o){ return o.x; });
-    var tutti=ATTIVI.filter(function(x){ return x.tutti && gia.indexOf(x)<0 && !altrove(x); });
-    if(tutti.length){ var ht=el('h2',null,'🌍 Validi per tutti ('+tutti.length+')'); ht.style.margin='22px 0 4px'; L.appendChild(ht);
+    var tutti=tuttiAll.filter(vedi);
+    if(tutti.length){ var ht=el('h2',null,'🌍 Validi per tutti ('+tutti.length+')'); ht.id='secTutti'; ht.style.margin='22px 0 4px'; L.appendChild(ht);
       L.appendChild(el('p','sub','Bonus e detrazioni senza limiti di ISEE, età o lavoro: puoi usarli anche se non riguardano il tuo profilo.'));
       var TB=el('div'); L.appendChild(TB);
       tutti.forEach(function(x,i){ var c=cardAttivo(x,{s:'tutti',why:'Vale per chiunque: non ci sono limiti di ISEE, età o lavoro.'},false); if(i>=4) c.hidden=true; TB.appendChild(c); });
       if(tutti.length>4){ var tb=el('button','back','Vedi tutti i '+tutti.length); tb.type='button'; tb.addEventListener('click',function(){ for(var q=0;q<TB.children.length;q++) TB.children[q].hidden=false; tb.hidden=true; }); TB.appendChild(tb); } }
-    if(!hits.length) L.appendChild(el('div','card empty','Prova ad aggiungere l\'ISEE o altre informazioni nel profilo. Intanto guarda la lista completa in "Tutti".'));
+    if(!hits.length) L.appendChild(el('div','card empty','Prova ad aggiungere l\'ISEE o le situazioni che vivi nel profilo. Intanto guarda la lista completa in "Tutti".'));
+    else if(filtrato&&!hv.length&&!tutti.length) L.appendChild(el('div','card empty','Nessun bonus in questa categoria.'));
   }
-
   var filtro='Tutte';
   function renderChips(){
     var cats=['Tutte']; ATTIVI.forEach(function(x){ if(cats.indexOf(x.c)<0) cats.push(x.c); });
@@ -1243,8 +1379,8 @@
     list.forEach(function(o){ L.appendChild(cardArrivo(o.x,o.me)); });
   }
   function striscia(c,x){ var rz=regDi(x.z); if(rz&&SC.col(rz)){ c.className+=' terr'; c.appendChild(scena(rz,'scene strip')); } }
-  function cardArrivo(x,me){ var c=el('div','card item'); striscia(c,x);
-      c.appendChild(el('span','pill b-soon',x.w)); if(me){ var p=el('span','pill b-ok','Ti riguarda'); p.style.marginLeft='6px'; c.appendChild(p); }
+  function cardArrivo(x,me){ var c=el('div','card item'); striscia(c,x); c.appendChild(bottoneStella(x,false));
+      var pl=el('div','pills'); pl.appendChild(el('span','pill b-soon',x.w)); if(me) pl.appendChild(el('span','pill b-ok','Ti riguarda')); c.appendChild(pl);
       var h=head(x); h.style.marginTop='10px'; c.appendChild(h);
       if(x.z){ var zt=el('span','pill b-check','📍 '+x.z); zt.style.marginLeft='6px'; c.appendChild(zt); }
       c.appendChild(el('div','amount',x.a)); c.appendChild(row('Per chi:',x.r));
@@ -1288,14 +1424,124 @@
     var L=$('listNews'); L.textContent='';
     NEWS.forEach(function(n){ if(n.loc&&!(profilo&&profilo.rub)) return; if(n.reg&&!(profilo&&profilo.regione===n.reg)) return; var c=el('div','card news'); c.appendChild(el('div','d',n.d)); c.appendChild(el('h3',null,n.t)); c.appendChild(el('p',null,n.p)); c.appendChild(el('div','meta','Fonte: '+n.src)); L.appendChild(c); });
   }
+  // I MIEI BONUS — stellina e passaggi fatti. Tutto resta in questo telefono (localStorage), niente esce.
+  var KMIEI='spicci-miei-v1';
+  function mieiGet(){ try{ var o=JSON.parse(localStorage.getItem(KMIEI)||'{}'); return (o&&typeof o==='object')?o:{}; }catch(e){ return {}; } }
+  function mieiSet(o){ try{ localStorage.setItem(KMIEI,JSON.stringify(o)); }catch(e){} }
+  function chiave(x){ return x.t+'|'+(x.z||''); }
+  function voce(o,k){ var r=o[k]; return (r&&typeof r==='object'&&r.d)?r:null; }
+  function salvato(x){ return !!voce(mieiGet(),chiave(x)); }
+  function toggleSalva(x){ var o=mieiGet(), k=chiave(x); if(voce(o,k)) delete o[k]; else o[k]={d:Date.now(),f:[]}; mieiSet(o); return !!o[k]; }
+  function fatti(x){ var r=voce(mieiGet(),chiave(x)); return (r&&r.f&&r.f.slice)?r.f:[]; }
+  function segnaFatto(x,i,on){ var o=mieiGet(), k=chiave(x), r=voce(o,k); if(!r){ r={d:Date.now(),f:[]}; o[k]=r; } if(!r.f||!r.f.slice) r.f=[];
+    var j=r.f.indexOf(i); if(on&&j<0) r.f.push(i); if(!on&&j>=0) r.f.splice(j,1); mieiSet(o); }
+  function trova(k){ for(var i=0;i<ATTIVI.length;i++) if(chiave(ATTIVI[i])===k) return {x:ATTIVI[i],tipo:'attivo'};
+    for(var j=0;j<ARRIVO.length;j++) if(chiave(ARRIVO[j])===k) return {x:ARRIVO[j],tipo:'arrivo'}; return {x:null,tipo:'via'}; }
+  function mieiLista(){ var o=mieiGet(), out=[]; for(var k in o){ var r=voce(o,k); if(!r) continue; var t=trova(k); out.push({k:k,r:r,x:t.x,tipo:t.tipo}); }
+    out.sort(function(a,b){ return b.r.d-a.r.d; }); return out; }
+  var tAvv=null;
+  function avviso(t){ var T=$('toast'); T.textContent=t; T.hidden=false; try{ if(tAvv) clearTimeout(tAvv); tAvv=setTimeout(function(){ T.hidden=true; },2800); }catch(e){} }
+  function bottoneStella(x,inline){ var b=el('button',inline?'btn sec stl':'star'); b.type='button';
+    function upd(){ var s=salvato(x); b.textContent=inline?(s?'★ Salvato':'☆ Salva'):(s?'★':'☆'); b.setAttribute('aria-pressed',String(s)); b.setAttribute('aria-label',s?'Togli dai miei bonus':'Salva nei miei bonus'); }
+    b.addEventListener('click',function(ev){ if(ev&&ev.stopPropagation) ev.stopPropagation(); var s=toggleSalva(x); upd(); avviso(s?'⭐ Salvato: lo ritrovi in "I miei bonus"':'Tolto dai miei bonus'); fillMieiBox(); });
+    upd(); b.upd=upd; return b; }
+  // Divide "Cosa fare" in passaggi da spuntare.
+  function passi(t){ return String(t||'').replace(/[,;]\s+(poi|quindi|infine)\s+/gi,function(m,w){ return '.\n'+w.charAt(0).toUpperCase()+w.slice(1)+' '; })
+      .replace(/([.!?])\s+(?=[A-ZÀ-ÖØ-Ý"«(])/g,'$1\n').split('\n').map(function(s){ return s.trim(); }).filter(function(s){ return s.length>1; }); }
+  function cosaFare(x,box,onch){ var P=passi(x.todo); if(!P.length) return; var r=el('div','row');
+    r.appendChild(el('b',null,P.length>1?'Cosa fare, passo per passo:':'Cosa fare:'));
+    var T=el('div','todo'), F=fatti(x);
+    P.forEach(function(s,i){ var lab=el('label','passo'+(F.indexOf(i)>=0?' ok':'')), cb=el('input'); cb.type='checkbox'; cb.checked=F.indexOf(i)>=0;
+      cb.addEventListener('change',function(){ var era=salvato(x); segnaFatto(x,i,cb.checked); lab.className='passo'+(cb.checked?' ok':'');
+        if(cb.checked&&!era) avviso('⭐ Salvato in "I miei bonus" con i passi fatti'); fillMieiBox(); if(onch) onch(); });
+      lab.appendChild(cb); lab.appendChild(el('span',null,s)); T.appendChild(lab); });
+    r.appendChild(T); box.appendChild(r); }
+  // AIUTO SULLE PAROLE DIFFICILI — spiegazioni brevi con il link alla pagina ufficiale
+  var GLOSS={
+    'ISEE valido':{t:'Cos\'è l\'ISEE',p:'È un numero che riassume la situazione economica della tua famiglia: redditi, risparmi e case. Molti bonus lo chiedono. Si può fare gratis: online sul sito INPS con SPID o CIE (con la dichiarazione già precompilata), oppure con l\'aiuto di un CAF. Di solito vale fino al 31 dicembre dell\'anno in cui lo fai.',l:[['Fai l\'ISEE sul sito INPS','https://inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.Portale-unico-ISEE.html']]},
+    'SPID o CIE':{t:'Cosa sono SPID e CIE',p:'Sono le chiavi per entrare nei siti pubblici, come INPS, Agenzia delle Entrate e Comune. SPID è un nome utente con password: lo rilascia uno dei gestori riconosciuti, anche gratis, con un documento valido, la tessera sanitaria, un\'email e il cellulare. In alternativa puoi usare la Carta d\'identità elettronica (CIE) con l\'app CieID.',l:[['Come avere SPID (AgID)','https://www.agid.gov.it/it/piattaforme/spid'],['Entrare con la CIE (Ministero dell\'Interno)','https://www.cartaidentita.interno.gov.it/identificazione-digitale/entra-con-cie/']]},
+    'IBAN':{t:'Cos\'è l\'IBAN',p:'È il codice di 27 caratteri del tuo conto corrente o di una carta con IBAN: inizia con IT. Lo trovi nell\'app o nell\'estratto conto della tua banca o di Poste. Per ricevere i soldi di solito il conto deve essere intestato o cointestato a te.',l:[]},
+    'PEC':{t:'Cos\'è la PEC',p:'È un\'email con valore legale, come una raccomandata con ricevuta di ritorno. Si attiva con uno dei gestori autorizzati da AgID, di solito a pagamento.',l:[['La PEC spiegata da AgID','https://www.agid.gov.it/it/piattaforme/posta-elettronica-certificata']]},
+    'dichiarazione dei redditi (730)':{t:'Cos\'è il 730',p:'È la dichiarazione dei redditi di chi è dipendente o pensionato. Ogni anno, in primavera, l\'Agenzia delle Entrate la prepara già compilata (730 precompilato): puoi accettarla o correggerla online, oppure farti aiutare da un CAF. Molte detrazioni, come spese mediche o lavori in casa, si chiedono qui.',l:[['Il 730 precompilato (Agenzia delle Entrate)','https://infoprecompilata.agenziaentrate.gov.it']]},
+    'contratto di affitto registrato':{t:'Contratto registrato',p:'Il contratto d\'affitto va registrato all\'Agenzia delle Entrate entro 30 giorni dalla firma; di solito se ne occupa il proprietario. Chiedigli la ricevuta di registrazione: per i bonus sull\'affitto serve quasi sempre.',l:[['Come si registra (Agenzia delle Entrate)','https://www.agenziaentrate.gov.it/portale/documents/20143/5629825/Brochure+RLI.pdf/0b668fa6-669f-6ea2-0e68-f98ab7753d4c']]}
+  };
+  function spiegazione(s){ var g=GLOSS[s], d=el('div','aiuto'); d.appendChild(el('b',null,g.t)); d.appendChild(el('p',null,g.p));
+    g.l.forEach(function(l){ var a=el('a',null,l[0]+' →'); a.href=l[1]; a.target='_blank'; a.rel='noopener'; d.appendChild(a); }); return d; }
+  function rigaServe(x){ var S=serveL(x); if(!S.length) return null; var r=el('div','row'); r.appendChild(el('b',null,'Ti serve:')); var box=el('div','need'), aperto=null;
+    S.forEach(function(s){ if(!GLOSS[s]){ box.appendChild(el('span','nd',s)); return; }
+      var c=el('button','nd',s+' '); c.type='button'; c.appendChild(el('b',null,'?')); c.setAttribute('aria-expanded','false'); c.setAttribute('aria-label',s+': cos\'è?');
+      c.addEventListener('click',function(ev){ if(ev&&ev.stopPropagation) ev.stopPropagation(); var era=aperto&&aperto.s===s;
+        if(aperto){ if(aperto.d.parentNode) aperto.d.parentNode.removeChild(aperto.d); aperto.c.setAttribute('aria-expanded','false'); aperto=null; }
+        if(era) return; var d=spiegazione(s); r.appendChild(d); c.setAttribute('aria-expanded','true'); aperto={s:s,d:d,c:c}; });
+      box.appendChild(c); });
+    r.appendChild(box); return r; }
+  // Riquadro "I miei bonus" in cima a Per te
+  var mieiBoxEl=null;
+  function fillMieiBox(){ var MB=mieiBoxEl; if(!MB) return; MB.textContent=''; var M=mieiLista(); if(!M.length) return; var urg=0;
+    M.forEach(function(o){ if(o.tipo==='attivo'){ var d=fineDi(o.x); if(d){ var g=giorniA(d); if(g>=0&&g<=14) urg++; } } });
+    var b=el('button','mieibox'); b.type='button'; var tx=el('span','tx'); tx.appendChild(el('b',null,'⭐ I miei bonus ('+M.length+')'));
+    tx.appendChild(el('small',null,urg?(urg===1?'1 scade entro 2 settimane':urg+' scadono entro 2 settimane'):'Quelli che hai salvato, con i passi già fatti')); b.appendChild(tx); b.appendChild(el('i',null,'›'));
+    b.addEventListener('click',function(){ show('miei'); }); MB.appendChild(b); }
+  function renderMiei(){ var L=$('listMiei'); L.textContent=''; var M=mieiLista();
+    if(!M.length){ L.appendChild(el('div','card empty','Non hai ancora salvato nessun bonus. Tocca la stellina ☆ su un bonus per ritrovarlo qui, con i passi che hai già fatto.')); return; }
+    var att=M.filter(function(o){ return o.tipo==='attivo'; }), arr=M.filter(function(o){ return o.tipo==='arrivo'; }), via=M.filter(function(o){ return o.tipo==='via'; });
+    att.sort(function(a,b){ var da=fineDi(a.x), db=fineDi(b.x); return (da?da.getTime():9e15)-(db?db.getTime():9e15); });
+    if(att.length){ L.appendChild(el('div','subh','Aperti ora ('+att.length+')')); att.forEach(function(o){ L.appendChild(cardAttivo(o.x,match(o.x)||null,false)); }); }
+    if(arr.length){ L.appendChild(el('div','subh','In arrivo ('+arr.length+')')); arr.forEach(function(o){ L.appendChild(cardArrivo(o.x,!!(profilo&&o.x.m&&o.x.m(profilo)))); }); }
+    if(via.length){ L.appendChild(el('div','subh','Non più in catalogo ('+via.length+')'));
+      via.forEach(function(o){ var c=el('div','card item'); var pl=el('div','pills'); pl.appendChild(el('span','pill b-check','Chiuso o tolto')); c.appendChild(pl);
+        var h=el('h3',null,o.k.split('|')[0]); h.style.margin='10px 0 4px'; c.appendChild(h);
+        c.appendChild(el('p','sub','Questo bonus non è più tra quelli aperti. Guarda in "In arrivo" se è attesa una nuova edizione.'));
+        var rb=el('button','back','Togli dalla lista'); rb.type='button'; rb.addEventListener('click',function(){ var m=mieiGet(); delete m[o.k]; mieiSet(m); renderMiei(); fillMieiBox(); }); c.appendChild(rb); L.appendChild(c); }); }
+  }
+  // INVITO A COMPLETARE — se hai spuntato poche caselle
+  function infoCasella(c){ var ic='', tx=c; try{ var l=$(c).parentNode; ic=l.querySelector('i').textContent; tx=l.querySelector('span').textContent; }catch(e){} return [ic,tx]; }
+  function spuntate(){ var n=0; CHECKS.forEach(function(c){ if($(c).checked) n++; }); return n; }
+  var ultimiHits=0;
+  function invito(){ var p=profilo, cand;
+    if(p.eta>=65||p.lavoro==='pensionato') cand=['cura','mezzi','lavori','malattia','animale','affitto'];
+    else if(p.lavoro==='studente') cand=['uni','mezzi','affitto','estero','corso','psico'];
+    else if(p.figli>0) cand=['scuola','sport','under3','affitto','mezzi','lavori','cura'];
+    else cand=['affitto','compra','mezzi','lavori','attesa','corso','cura'];
+    cand=cand.filter(function(c){ return !$(c).checked; }).slice(0,4); if(!cand.length) return null;
+    var box=el('div','card invito'); box.appendChild(el('h3',null,'🧩 Ti riguarda qualcuna di queste?'));
+    box.appendChild(el('p','sub','Toccala e trovi subito altri bonus. Puoi cambiarle quando vuoi dal Profilo.'));
+    var W=el('div','opts'); cand.forEach(function(c){ var inf=infoCasella(c), b=el('button','opt'); b.type='button'; b.appendChild(el('i',null,inf[0]||'➕')); b.appendChild(el('span',null,inf[1]));
+      b.addEventListener('click',function(){ var prima=ultimiHits; $(c).checked=true; aggiornaGruppi(); profilo=read(); save(); renderAll();
+        var d=ultimiHits-prima; avviso(d>0?('Fatto: '+d+(d===1?' bonus in più per te':' bonus in più per te')).replace('Fatto: 1 bonus in più','Fatto: un bonus in più'):'Fatto: profilo aggiornato'); });
+      W.appendChild(b); });
+    box.appendChild(W);
+    var all=el('button','link','Vedi tutte le situazioni →'); all.type='button'; all.addEventListener('click',function(){ show('profilo'); vaiPasso(3); }); box.appendChild(all);
+    return box; }
+  // PROFILO IN 3 PASSI
+  var passo=1;
+  function errore(t){ var e=$('formErr'); e.textContent=t||''; e.hidden=!t; }
+  function controllo1(){ var e=parseInt($('eta').value,10); if(!(e>=16&&e<=110)) return 'Scrivi la tua età (da 16 anni in su).';
+    if(!$('regione').value) return 'Scegli la Regione in cui vivi.'; if(!$('lavoro').value) return 'Scegli cosa fai: lavoro, studio o pensione.'; return ''; }
+  function aggiornaPassi(){ for(var i=1;i<=3;i++) $('passo'+i).hidden=(i!==passo);
+    var st=document.querySelectorAll('.st'); for(var j=0;j<st.length;j++){ var k=+st[j].getAttribute('data-step'); st[j].className='st'+(k<passo?' fatto':''); if(k===passo) st[j].setAttribute('aria-current','step'); else st[j].removeAttribute('aria-current'); }
+    $('prev').hidden=passo===1; $('next').hidden=passo===3; $('go').hidden=passo!==3; $('salva').hidden=(passo===3||!profilo); }
+  function vaiPasso(n){ if(n>1){ var er=controllo1(); if(er){ passo=1; aggiornaPassi(); errore(er); return false; } }
+    passo=Math.max(1,Math.min(3,n)); aggiornaPassi(); errore('');
+    try{ var f=$('form'); if(f.getBoundingClientRect&&f.getBoundingClientRect().top<0) f.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){} return true; }
+  function aggiornaGruppi(){ var G=document.querySelectorAll('.grp'); for(var i=0;i<G.length;i++){ var I=G[i].querySelectorAll('input[type=checkbox]'), n=0;
+      for(var j=0;j<I.length;j++){ var lab=I[j].parentNode; if(I[j].checked){ n++; lab.classList.add('on'); } else lab.classList.remove('on'); }
+      var cn=G[i].querySelector('.cnt'); if(cn){ cn.textContent=n?String(n):''; cn.hidden=!n; } } }
+  function hintComune(pieno){ var v=String($('comune').value||'').toLowerCase().trim(), H=$('comuneHint');
+    if(!v){ H.hidden=true; H.textContent=''; return; } var k=trovaLoc(v);
+    if(k){ var r=LOC[k].reg; if(!$('regione').value){ $('regione').value=r; provToggle(); }
+      if($('regione').value===r){ H.className='hint'; H.textContent='✓ Trovato: '+k+'. Vedrai anche i suoi bonus.'; }
+      else { H.className='hint no'; H.textContent='Attenzione: '+k+' è in '+r+'. Controlla la Regione.'; }
+      H.hidden=false; return; }
+    if(pieno){ H.className='hint no'; H.textContent='I bonus di questo Comune non sono ancora in catalogo: vedrai quelli nazionali e della tua Regione.'; H.hidden=false; } else H.hidden=true; }
   function renderAll(){ renderPerte(); renderChips(); renderTutti(); renderRegioni(); renderImprese(); renderPensione(); renderArrivo(); renderNews(); }
 
-  var VIEWS=['perte','tutti','sezioni','regioni','imprese','pensione','arrivo','news','profilo'];
-  var SOTTO={regioni:'sezioni',imprese:'sezioni',pensione:'sezioni',news:'sezioni'};
+  var VIEWS=['perte','tutti','sezioni','regioni','imprese','pensione','arrivo','news','miei','profilo'];
+  var SOTTO={regioni:'sezioni',imprese:'sezioni',pensione:'sezioni',news:'sezioni',miei:'sezioni'};
   function show(v){
     if(VIEWS.indexOf(v)<0) return;
     VIEWS.forEach(function(k){ $('v-'+k).hidden = k!==v; });
-    if(v==='regioni') renderRegioni();
+    if(v==='regioni') renderRegioni(); if(v==='miei') renderMiei(); if(v==='perte') fillMieiBox(); if(v==='profilo') aggiornaPassi();
     var nv=SOTTO[v]||v, bs=document.querySelectorAll('nav button'); for(var i=0;i<bs.length;i++){ bs[i].setAttribute('aria-selected', bs[i].getAttribute('data-v')===nv); }
     try{ window.scrollTo(0,0); }catch(e){}
   }
@@ -1303,12 +1549,23 @@
   for(var i=0;i<bs.length;i++){ (function(b){ b.addEventListener('click',function(){ show(b.getAttribute('data-v')); }); })(bs[i]); }
   var gs=document.querySelectorAll('[data-go]'); for(var gi=0;gi<gs.length;gi++){ (function(g){ g.addEventListener('click',function(){ show(g.getAttribute('data-go')); }); })(gs[gi]); }
   $('q').addEventListener('input',renderTutti);
-  $('form').addEventListener('submit',function(e){ e.preventDefault(); profilo=read(); save(); renderAll(); show('perte'); });
-  $('clear').addEventListener('click',function(){ try{ localStorage.removeItem(KEY); }catch(e){} $('form').reset(); $('regione').value='Emilia-Romagna'; provToggle(); profilo=null; renderAll(); });
-  $('regione').addEventListener('change',provToggle);
+  $('form').addEventListener('submit',function(e){ e.preventDefault(); var er=controllo1(); if(er){ passo=1; aggiornaPassi(); errore(er); return; }
+    if(passo<3&&!profilo){ vaiPasso(passo+1); return; }
+    profilo=read(); save(); passo=1; aggiornaPassi(); renderAll(); show('perte'); });
+  $('next').addEventListener('click',function(){ vaiPasso(passo+1); });
+  $('prev').addEventListener('click',function(){ vaiPasso(passo-1); });
+  var stb=document.querySelectorAll('.st'); for(var si=0;si<stb.length;si++){ (function(b){ b.addEventListener('click',function(){ vaiPasso(+b.getAttribute('data-step')); }); })(stb[si]); }
+  CHECKS.forEach(function(c){ $(c).addEventListener('change',aggiornaGruppi); });
+  $('clear').addEventListener('click',function(){ try{ localStorage.removeItem(KEY); localStorage.removeItem(KMIEI); }catch(e){} $('form').reset(); $('regione').value=''; provToggle(); profilo=null; passo=1; aggiornaGruppi(); aggiornaPassi(); hintComune(false); renderAll(); avviso('Dati cancellati da questo telefono'); });
+  $('regione').addEventListener('change',function(){ provToggle(); hintComune(true); });
+  $('comune').addEventListener('input',function(){ hintComune(false); });
+  $('comune').addEventListener('change',function(){ hintComune(true); });
+  $('iseeAiuto').appendChild(spiegazione('ISEE valido'));
+  $('iseeQ').addEventListener('click',function(){ var A=$('iseeAiuto'); A.hidden=!A.hidden; $('iseeQ').setAttribute('aria-expanded',String(!A.hidden)); });
 
-  var caricato=load(); provToggle();
+  var caricato=load(); provToggle(); aggiornaGruppi(); hintComune(true);
   if(caricato){ profilo=read(); renderAll(); show('perte'); } else { renderAll(); }
+  aggiornaPassi();
 })();
 </script>
 <script>
