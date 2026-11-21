@@ -17,6 +17,7 @@ Tutto è dentro `index.html`, nel primo `<script>`:
 - **Stima "Fino a … €"**: somma solo gli importi fissi scritti in `a` (es. "1.000 € per ogni figlio" non conta, "Fino a 1.500 €" conta). Scrivi gli importi come nella fonte, senza gonfiarli.
 - **Sezione "Imprese e partite IVA"**: mostra le misure con `c:"Impresa"`, quelle con `k` che contiene `impresa`, `assumo` o `agri`, e quelle con `imp:1`. Per le nuove misure per imprese, autonomi e professionisti usa `c:"Impresa"`.
 - **Sezione "Pensionati e over 65"**: mostra le misure di ATTIVI e ARRIVO con `pens:1`. Metti `pens:1` alle nuove misure pensate per pensionati e anziani (pensione, assistenza, sconti over 65), anche locali.
+- **"Validi per tutti" in fondo a "Per te"** (dal 22/11/2026): mostra a chiunque le misure di ATTIVI con `tutti:1` che non sono già tra le sue. Metti `tutti:1` solo alle misure nazionali che chiunque può usare: senza soglie ISEE, età, lavoro, figli o altri requisiti personali (es. detrazioni per lavori in casa, spese mediche, abbonamenti ai mezzi). Non metterlo alle misure di una situazione delicata o precisa (debiti, violenza, avvocato, malattia, disabilità, sfratto): quelle restano legate alle caselle. Non metterlo alle misure con `z`.
 - **Spicci Pro** (`pro.html`): è l'unica pagina commerciale, per professionisti ed enti. L'app per i cittadini resta gratuita, senza pubblicità e senza affiliazioni: non aggiungere prezzi, moduli di pagamento o raccolta di dati senza richiesta del titolare.
 
 ### Sfondi illustrati dei territori
@@ -33,7 +34,7 @@ Campi del profilo `p`: `eta` (numero), `genere` ('f'|'m'|''), `regione`, `prov` 
 - Spostamenti e altro: `mezzi` (bus, treni, metro), `auto` (devo cambiare auto), `elettrico`, `animale`, `trasf` (vorrei trasferirmi in un piccolo Comune o al Sud), `rientro` (vivo all'estero e vorrei tornare in Italia).
 
 Campo facoltativo `k` (in ATTIVI e ARRIVO): la misura compare solo se è spuntata almeno una delle caselle indicate, separate da `|`. Esempi: `k:"scuola"` per libri, borse e mense scolastiche; `k:"sport"` per voucher sport e centri estivi; `k:"scuola|mezzi"` per gli abbonamenti studenti; `k:"sfratto"` per i fondi morosità e sfratti; `k:"cura"` per i contributi ai caregiver. Usalo per le misure che riguardano una situazione precisa. Non serve per quelle che dipendono solo da età, ISEE, figli o territorio: quelle le capisce già `m`. I testi delle caselle restano brevi e generici, senza nomi di bonus o di luoghi.
-Per le misure locali usa sempre `p.loc==='Comune di X'` (o `p.regione==='X'` per le regionali): mai mostrare una misura locale a chi vive altrove.
+Per le misure locali usa sempre `p.loc==='Comune di X'` (o `p.regione==='X'` per le regionali): mai mostrare una misura locale a chi vive altrove. In più, all'avvio l'app nasconde da sola ogni misura con `z` a chi non abita in quella Regione o in quel Comune (funzione `abitaIn`): non toglierla.
 
 ## Regole editoriali (obbligatorie)
 1. **Solo fonti ufficiali per inserire o cambiare una misura**: INPS, Agenzia delle Entrate, MIMIT, Invitalia, Gazzetta Ufficiale, ministeri, siti di Regioni, Comuni, Unioni, ATS/ASL, portali UE. I siti di notizie servono solo come segnale per andare a cercare la fonte ufficiale. Se non trovi la fonte ufficiale, non inserire; se le fonti si contraddicono, usa `dub:1`.
