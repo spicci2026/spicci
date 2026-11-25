@@ -7,11 +7,6 @@ Regole: vedi la sezione "Espansione Comuni" in `CLAUDE.md`. Se per un Comune non
 Si aggiungono solo i Comuni attivi: almeno 3 misure diverse per i residenti negli ultimi 12 mesi sul sito ufficiale. Analisi del 18/11/2026 su 24 candidati (misure viste): Pisa 8, Mantova 5, Siena 4, Carpi 4, Lecce 4 (sito non leggibile in automatico), Pordenone 4 (quasi tutte regionali), Arezzo 3-4, Pavia 3-4, Pistoia 3, Como 3, Lucca 2-3, Cesena 2-3; sotto la soglia Imola, Pesaro, Alessandria, Cuneo, Cremona, Faenza, Busto Arsizio, Varese, Treviso, Sesto San Giovanni, Brindisi, La Spezia.
 
 ## Da fare (in ordine di priorità)
-- Cremona (Lombardia)
-- Massa (Toscana)
-- Trapani (Sicilia)
-- Viterbo (Lazio)
-- Cosenza (Calabria)
 - Potenza (Basilicata)
 - Olbia (Sardegna)
 - Matera (Basilicata)
@@ -48,6 +43,7 @@ Si aggiungono solo i Comuni attivi: almeno 3 misure diverse per i residenti negl
 - Urbino (Marche)
 
 ## Fatti
+- Massa (Toscana) — 2026-11-25
 - Pisa (Toscana) — 2026-11-18
 - Mantova (Lombardia) — 2026-11-18
 - Siena (Toscana) — 2026-11-18
@@ -77,6 +73,10 @@ Si aggiungono solo i Comuni attivi: almeno 3 misure diverse per i residenti negl
 - Ragusa (Sicilia) — 2026-11-23
 
 ## Rimandati
+- Cremona (Lombardia) — 2026-11-25: nelle ricerche sul sito ufficiale nessuna misura per i residenti del 2026 (solo avvisi 2024 e precedenti): poco attivo o sito poco indicizzato, riprovare più avanti
+- Trapani (Sicilia) — 2026-11-25: poco attivo: per i residenti solo agevolazioni TARI (avviso con date incoerenti), bonus figlio regionale chiuso a dicembre 2025 e compostiere; gli altri avvisi sono per enti del Terzo Settore
+- Viterbo (Lazio) — 2026-11-25: nessuna misura comunale trovata nelle ricerche (solo avvisi della Regione Lazio): riprovare più avanti
+- Cosenza (Calabria) — 2026-11-25: nessuna misura comunale trovata nelle ricerche (solo Comuni vicini e Camera di commercio): riprovare più avanti
 - Grosseto (Toscana) — 2026-11-23: il sito ufficiale www.comune.grosseto.it blocca la lettura automatica; nei risultati di ricerca compaiono almeno 3 misure 2026 (contributi affitti, Bonus Estate, rimborso scuola dell'infanzia paritaria): riprovare più avanti
 - Caserta (Campania) — 2026-11-23: il sito ufficiale www.comune.caserta.it non si apre in automatico; misure non verificabili, riprovare più avanti
 - Asti (Piemonte) — 2026-11-23: poco attivo (contributo affitto non attivo per mancanza di fondi, nessun contributo per i centri estivi, solo il bonus TARI nazionale)
